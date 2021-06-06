@@ -1,0 +1,33 @@
+.App{
+  overflow-x: hidden;
+}
+
+button.orange{
+  width: 170px;
+  padding-inline-start: 5px;
+  height: 42px;
+  background-color: #FF4400;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+  border:none;
+  font-size:18px;
+  position: relative;
+  line-height:23.86px;
+  span{
+      position: absolute;
+      right: 20px;
+  }
+}
+button.orange:hover{
+  background-color: #f75c24 !important;
+}
+button.orange:active{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+ 
+}

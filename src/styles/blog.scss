@@ -1,0 +1,45 @@
+#blog{
+    background-color: #EEEEEE;
+    background-repeat: no-repeat;
+    background-position-y: 40%;
+    background-position-x: -20%;
+}
+.blog-jumbotron{
+   h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 116.6%;
+    color: #FF4400;
+   }
+   h1+p{
+    font-size: 17px;
+    line-height: 32px;
+    color: #023E4F;
+    font-family: 'Sarabun', sans-serif;
+   }
+}
+
+.blogs{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    .blog-card{
+        color: #FF4400;
+        .card-body div{
+            color: #FF4400;
+            font-size: 13px;
+        }
+    }
+    p{
+        color: #565656;
+        font-size: 15px;
+        line-height: 142%
+    }
+    button.orange{
+        width: 150px !important;
+        font-size: 15px !important;
+    }
+}

@@ -1,0 +1,66 @@
+div.wayapayJumbotron{
+    background-color: #fff;
+    padding-left: 6%;
+    background-repeat: no-repeat;
+    background-position-y: 140%;
+    > div div:first-of-type{
+        align-self: center;
+    }
+    h2{
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 700;
+     font-size: 42px;
+     line-height: 116.6%;
+     color: #4F4F4F;
+    }
+    h2+p{
+     font-size: 15px;
+     line-height: 160%;
+     color: #4F4F4F;
+     word-spacing: 3px;
+     max-width: 90%;
+     font-family: 'Sarabun', sans-serif;
+    }
+    img{
+        max-width: 430px !important;
+       margin-left: -90px;
+       filter: drop-shadow(0px 2px 2px #4e4c4d9a);
+    }
+  }
+  
+  
+  .theGrids{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+   
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  
+  .singleBox{
+    padding-top: 10%;
+    padding-bottom: 2px;
+    border: 1px solid #D3D3D3;
+    text-align: center;
+    color: #4F4F4F;
+    background-color: #FAFAFA;
+    border-radius: 8px;
+    h6{
+        padding: 15px 0px 10px 0;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 29px;
+        text-transform: uppercase;
+    }
+    p{
+        font-family: 'Sarabun', sans-serif;
+        font-size: 15px;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    img{
+        max-width: 130px !important;
+    }
+  }
