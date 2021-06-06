@@ -1,0 +1,67 @@
+#signIn{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 1%;
+}
+form{
+    padding-top: 3em;
+    padding-bottom: 1em;
+    background-color: white;
+    justify-content: center;
+    width: 45vw;
+    border-radius: 10px;
+    img:first-of-type {
+        max-width: 140px;
+    }
+    button.login{
+        width: 430px !important;
+    }
+    .single{
+        font-family: 'Sarabun', sans-serif;
+        padding-top: 5% !important;
+    }
+    .inputGroup{
+       padding-inline-start: 8rem ;
+       label{
+        font-family: 'Sarabun', sans-serif;
+        font-size: 14px;
+        color: #333333;
+       }
+        input{
+           background-color: white;
+           border: 0.4px solid #BABABA;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #C9C8C8;
+            width: 430px;
+        }
+    }
+    button.socialBtn{
+            img{
+                max-width: 26px !important;
+            }
+        width: 168px;
+        border: 0.5px solid #023e4f8c;
+        border-radius: 4px;
+        color: #023E4F;
+        font-size: 12px;
+        align-items: center;
+    }
+}
+// .login{
+//     padding-top: 5% !important; 
+//     padding-left: 19%;
+// }
+// .baseModal{
+//     min-height: 80vh;
+//     background: #FFFFFF;
+//     border-radius: 10px;
+//     form{
+      
+//     }
+//     form img:first-of-type {
+//         max-width: 140px;
+//     }
+// }
