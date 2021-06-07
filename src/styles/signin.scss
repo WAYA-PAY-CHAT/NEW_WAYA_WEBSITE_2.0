@@ -3,65 +3,154 @@
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
-    padding-top: 1%;
+    padding-top: 2%;
 }
-form{
+
+.login form{
     padding-top: 3em;
     padding-bottom: 1em;
     background-color: white;
     justify-content: center;
-    width: 45vw;
+    width: 35vw;
     border-radius: 10px;
     img:first-of-type {
         max-width: 140px;
     }
-    button.login{
-        width: 430px !important;
+    button#loginBtn{
+        margin-top: 2em;
+        width: 360px !important;
     }
     .single{
         font-family: 'Sarabun', sans-serif;
         padding-top: 5% !important;
     }
     .inputGroup{
-       padding-inline-start: 8rem ;
+        padding-left: 4em;
+        position: relative;
        label{
         font-family: 'Sarabun', sans-serif;
         font-size: 14px;
         color: #333333;
        }
-        input{
-           background-color: white;
-           border: 0.4px solid #BABABA;
-            border-radius: 5px;
-            font-size: 14px;
-            color: #C9C8C8;
-            width: 430px;
-        }
-    }
-    button.socialBtn{
-            img{
-                max-width: 26px !important;
-            }
-        width: 168px;
-        border: 0.5px solid #023e4f8c;
-        border-radius: 4px;
-        color: #023E4F;
-        font-size: 12px;
-        align-items: center;
+       input{
+        height: 50px;
+        width: 360px !important;
+        border:none;
+        outline: none;
+        padding-left: 33px;
+       }
+       span.iconeye{
+        cursor: pointer;
+           position:absolute;
+           top:14%;
+           right: 18%;
+       }
     }
 }
-// .login{
-//     padding-top: 5% !important; 
-//     padding-left: 19%;
+
+// input[type='password']{
+//     background-repeat: no-repeat;
+//     background-position: right;
+//     background-position-x: 95%;
 // }
-// .baseModal{
-//     min-height: 80vh;
-//     background: #FFFFFF;
-//     border-radius: 10px;
-//     form{
-      
-//     }
-//     form img:first-of-type {
-//         max-width: 140px;
-//     }
-// }
+
+input{
+    background-color: white !important;
+    border: 0.4px solid #BABABA  !important;
+     border-radius: 5px;
+    
+ }
+ input::placeholder{
+    font-size: 13px;
+    color: #C9C8C8 !important;
+ }
+
+button.socialBtn{
+    transition: all 1s easeout;
+    img{
+        max-width: 26px !important;
+    }
+    width: 168px;
+    border: 0.5px solid #023e4f8c;
+    border-radius: 4px;
+    color: #023E4F;
+    font-size: 12px;
+    align-items: center;
+}
+
+button.socialBtn:hover, input:focus{
+    box-shadow: 0px 0px 5px #ff4400a2;     
+}
+
+#signUp{
+    h3{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        color: #fff;
+    }
+    h3+p{
+        font-size: 15px;
+        color: #fff;
+        font-family: 'Sarabun', sans-serif;
+       }
+    form{
+        background-color: white;
+        justify-content: center;
+        width: 40vw;
+        padding-top: 2em;
+        padding-left: 4em;
+        padding-bottom: 1.5em;
+        border-radius: 10px;
+        input[type='checkbox']{
+            cursor: pointer;
+        }
+        label{         
+            font-family: 'Sarabun', sans-serif;
+            font-size: 13px;
+            color: #3F3F3F;
+            span{
+                font-style: italic;
+                color: #2626BC;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        .inputGroup{
+            display:grid;
+            grid-template-columns: repeat(1fr);
+            grid-column-gap: 0;
+            margin-bottom: 20px;
+            position: relative;
+            input{
+                height: 50px;
+                width: 430px !important;
+                border:none;
+                outline: none;
+                padding-left: 33px;
+            }
+            span.iconeye{
+                cursor: pointer;
+                   position:absolute;
+                   top:20%;
+                   right: 15%;
+               }
+        }
+        .name{
+            width: 430px;
+            input{
+                height: 50px;
+                width: 210px;
+                border:none;
+                outline: none;
+                padding-left: 33px;
+            }
+        }
+        img:first-of-type {
+            max-width: 140px;
+        }
+        button#signupBtn{
+            width: 430px !important;
+        }
+    }
+}

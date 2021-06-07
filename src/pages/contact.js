@@ -3,7 +3,7 @@ import '../styles/contact.scss'
 function Contact(){
     return (
         <div id="contactPage" className="row pt-4 justify-content-start">
-            <div className="col text-start">
+            <div className="col-sm-9 col-md-6 text-start">
                 <h3>Contact Us</h3>
                 <p className="py-4">You are welcome to reach us at any of the contacts below</p>
                 <address className='row'>
@@ -33,9 +33,9 @@ function Contact(){
                     </div>
                 </div>
             </div>
-            <div className="col text-start">
+            <div className="col-md-6 text-start">
                 <h4>Get in touch</h4>
-                <form className='pt-4'>
+                <form className='pt-4' id='contactForm'>
                     <input type='text' placeholder='Name' required />
                     <input type='email' placeholder='Email' required />
                     <input type='tel' placeholder='Phone number' required />
