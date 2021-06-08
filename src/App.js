@@ -4,6 +4,8 @@ import MerchantPage from './pages/merchant'
 import SignIn from './pages/signIn';
 import WayaGram from './pages/wayagram';
 import WayaPay from './pages/wayapay'
+import Home from './pages/home'
+import About from './pages/about'
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,6 +14,7 @@ import {
 } from "react-router-dom";
 import './styles/App.scss';
 import WayaChat from './pages/wayachat';
+import Agent from './pages/agent';
 
 function App() {
   return (
@@ -19,6 +22,15 @@ function App() {
         <Router>
       <Route exact path="/">
         <Redirect to="/home" />
+      </Route>
+      <Route path='/home'>
+     <Home/>
+      </Route> 
+      <Route path='/about'>
+        <About/>
+      </Route>
+      <Route path='/agent'>
+        <Agent/>
       </Route>
       <Route path="/contact">
         <ContactPage />

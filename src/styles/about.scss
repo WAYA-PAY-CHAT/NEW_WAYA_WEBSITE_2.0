@@ -1,0 +1,47 @@
+#aboutsection{
+    .about-jumbotron{
+     .textArea{
+         background-repeat: no-repeat;
+         background-position:right;
+     }
+    }
+    h1{
+        font-family:'Open Sans', sans-serif;
+        font-weight: 800;
+        font-size: 27px;
+        line-height: 116.6%;
+
+        color: #FF4400;
+    }
+    p{
+        color: #333333;
+        font-family: 'Sarabun', sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 34px;
+    }
+    #aboutGrid{
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        h6{
+            color: #FF4400;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        p{
+            max-width: 200px;
+            line-height: 190%;
+            font-size: 13px;
+            text-align: center;
+            font-family: 'Sarabun', sans-serif;
+        }
+    }
+
+    >img:last-of-type{
+        width: 10% !important;
+        position: absolute;
+        margin-top: -15%;
+        margin-left: 85%;
+        cursor: pointer;
+    }
+}
