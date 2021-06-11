@@ -3,6 +3,174 @@
         h1{
             text-transform: uppercase;
             color: #FF4400;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            font-size: 50px;
+        }
+        h1 + p {
+            font-family: 'Sarabun', sans-serif;
+            font-size: 22px;
+            line-height: 126%;
+            color: #4F4F4F;
         }
     }
+    .banner-two{
+        background-color: #E4E4E3;
+        h3{
+           
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 116.6%;
+            text-transform: capitalize;
+            color: #4F4F4F;
+        }
+        img{
+            max-width: 55%;
+        }
+    }
+    .bottom-jumbotron{
+        h5{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 116.6%;
+            text-transform: capitalize;
+            color: #FF4400;
+            padding-bottom: 10%;
+        }
+        .last-banner-phones{
+            display: grid;
+            grid-template-columns: repeat(3, 120px);
+            .single{
+                background-color: #F4F4F4;
+                height: 100px;
+                border-radius: 50%;
+                margin-right: 10px;
+                margin-left: 10px;
+                p{
+                    font-family: 'Sarabun', sans-serif;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 116.6%;
+                    text-align: center;
+                    text-transform: capitalize;
+                    color: #4F4F4F;
+                }
+                img{
+                    transform: rotate(-5deg);
+                }
+            }
+            img{
+                max-width: 40px;
+               margin-left: 30px;
+            }
+        }
+    }
+    ul.timeline {
+        list-style-type: none;
+        position: relative;
+        padding-left: 2.5rem;
+        p{
+            padding-block-end: 10px;
+        }
+    }
+    
+     /* Timeline vertical line */
+    ul.timeline:before {
+        content: ' ';
+        background: #FF4400;
+        display: inline-block;
+        position: absolute;
+        left: 17.5px;
+        width: 2px;
+        height: 80%;
+        z-index: 400;
+        border-radius: 1rem;
+    }
+    
+    li.timeline-item {
+        margin: 0px 0;
+    }
+    
+    
+    /* Timeline item circle marker */
+    li.timeline-item::before {
+        content: ' ';
+        background: #FF4400;
+        display: inline-block;
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        left: 11px;
+        width: 14px;
+        height: 14px;
+        z-index: 400;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .ending{
+        background-position: top;
+        background-repeat: no-repeat;
+        h2{
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 116.6%;
+            text-transform: capitalize;
+            color: #4F4F4F;
+        }
+        img[alt='banner pic']{
+            margin-left: -30px;
+            max-width: 80%;
+            transform: rotate(28deg);
+        }
+
+    }
+    section{
+        background-color: #FF4400;
+        height: 1000px;
+        h4{
+            padding-block-start: 3%;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 35px;
+            line-height: 116.6%;
+            font-weight: bold;
+            word-spacing: 0.5px;
+            text-transform: capitalize;
+            color: #FFFFFF;
+        }
+        form{
+            margin: 4% auto;
+            background-color: #fff;
+            padding: 5%;
+            max-width: 70vw;
+            padding: 4em 10em;
+            label{
+                font-family: 'Sarabun', sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 116.6%;
+                text-transform: capitalize;
+                color: #4F4F4F;
+            }
+            label::after{
+                content: '*';
+                color: red;
+                padding-inline-start: 5px;
+            }
+            .inputGroup{
+                margin-bottom: 2em;
+            }
+            input{
+                height: 50px;
+               border-radius: 2px;
+               background-color: #F0F0F0 !important;
+                border:none;
+                outline: none;
+                padding-left: 33px;
+            }
+        }
+    }
+    
 }

@@ -1,3 +1,4 @@
+import PageFooter from '../componentParts/footer'
 import '../styles/merchant.scss'
 
 function Merchant(){
@@ -51,6 +52,7 @@ function Merchant(){
                     </div>
                 </div>
             </div>
+            <PageFooter/>
         </div>
     )
 }

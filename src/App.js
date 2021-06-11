@@ -15,6 +15,7 @@ import {
 import './styles/App.scss';
 import WayaChat from './pages/wayachat';
 import Agent from './pages/agent';
+import HowItWorks from './pages/how-it-works';
 
 function App() {
   return (
@@ -51,8 +52,10 @@ function App() {
       <WayaChat/>
       </Route> 
       <Route path='/signin'>
-        {/* Will be a protected route */}
       <SignIn/>
+      </Route>
+      <Route path='/how-it-works'>
+      <HowItWorks/>
       </Route>
       </Router>
    </div>

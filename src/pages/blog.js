@@ -1,5 +1,6 @@
 import '../styles/blog.scss'
 import {useState} from 'react'
+import PageFooter from '../componentParts/footer'
 
 function Blog(){
     const [posts, setposts] = useState([
@@ -95,6 +96,7 @@ function Blog(){
                 </button>
                 </div>
             </div>
+            <PageFooter/>
        </div>
     )
 }

@@ -1,3 +1,4 @@
+import PageFooter from '../componentParts/footer'
 import '../styles/wayapay.scss'
 
 function WayaPay(){
@@ -67,6 +68,7 @@ function WayaPay(){
                     <p>Request and receive money from friends and families, customers etc, using phone number through WayaPay</p>
                 </div>
             </div>
+            <PageFooter/>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import '../styles/signin.scss'
 import {useState} from 'react'
+import PageFooter from '../componentParts/footer'
 
 function SignIn(){
     const [showLogin, setshowLogin] = useState(true)
@@ -123,6 +124,7 @@ function SignIn(){
                 </form>
                 </div>
             </div>  
+            <PageFooter/>
        </div>
     )
 }

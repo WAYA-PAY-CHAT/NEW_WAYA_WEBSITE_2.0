@@ -1,6 +1,7 @@
 // import '../styles/wayachat.scss'
 import SingleBox from '../componentParts/singleBox'
 import {useState} from 'react'
+import PageFooter from '../componentParts/footer'
 
 function WayaChat(){
     const [longText, setLongText] = useState('With WayaChat, you’ll get fast, simple, secure messaging and calling for free, available on andriod phones all over the world')
@@ -55,6 +56,7 @@ function WayaChat(){
                  imageName={el.image}/>
            })}           
            </div>
+           <PageFooter/>
        </div>
     )
 }

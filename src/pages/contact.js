@@ -1,3 +1,4 @@
+import PageFooter from '../componentParts/footer'
 import '../styles/contact.scss'
 
 function Contact(){
@@ -44,6 +45,7 @@ function Contact(){
                     <button type='submit' className='orange'>Send <span><img src='/rightArr.png' /></span></button>
                 </form>
             </div>
+            <PageFooter/>
         </div>
     )
 }
