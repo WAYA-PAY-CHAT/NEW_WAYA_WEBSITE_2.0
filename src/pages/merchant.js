@@ -1,10 +1,13 @@
 import PageFooter from '../componentParts/footer'
+import TopNav from '../componentParts/topNav'
 import '../styles/merchant.scss'
 
 function Merchant(){
     return (
-        <div id="merchantPage" className="">
-            <div className="main-jumbotron py-4 my-4">
+       <div>
+           <TopNav/>
+           <div id="merchantPage" className="">
+            <div className="main-jumbotron pb-4 mb-4">
                 <div className="py-4 row">
                     <div className='col-md-5 pt-4 mt-4'>
                         <h1 className="">WAYA PAYCHAT WAS MADE TO HELP YOUR BUSINESS GROW</h1>
@@ -54,6 +57,7 @@ function Merchant(){
             </div>
             <PageFooter/>
         </div>
+       </div>
     )
 }
 

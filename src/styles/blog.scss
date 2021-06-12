@@ -64,3 +64,9 @@
         padding-right: 20px
     }
 }
+
+@media only screen and (max-width: 425px) {
+    .blogs{
+        grid-template-columns: 310px;
+    }
+}

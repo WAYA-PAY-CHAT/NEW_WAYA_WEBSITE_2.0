@@ -28,6 +28,75 @@ button.orange:active{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
- 
+div.wayapayJumbotron{
+  background-color: #fff;
+  padding-left: 6%;
+  background-repeat: no-repeat;
+  background-position-y: 140%;
+  > div div:first-of-type{
+      align-self: center;
+  }
+  h2{
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 700;
+   font-size: 42px;
+   line-height: 116.6%;
+   color: #4F4F4F;
+  }
+  h2+p{
+   font-size: 15px;
+   line-height: 160%;
+   color: #4F4F4F;
+   word-spacing: 3px;
+   max-width: 90%;
+   font-family: 'Sarabun', sans-serif;
+  }
+  img{
+      max-width: 430px !important;
+     margin-left: -90px;
+     filter: drop-shadow(0px 2px 2px #4e4c4d9a);
+  }
+}
+
+.theGrids{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+
+.hiding{
+  display: none;
+}
+
+.showing{
+  display: block;
+}
+
+@media only screen and (max-width: 425px){
+  .theGrids{
+    grid-template-columns: 300px;
+  }
+  div.wayapayJumbotron{
+    padding-top:0;
+    background-color: #fff;
+    background-image: none !important;
+    h2{
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      font-size: 23px;
+
+     }
+     h2+p{
+      font-size: 13px;
+     }
+     img{
+      max-width: 230px !important;
+      text-align: center;
+      margin-left: 10px;
+  }
+  }
+  
 }

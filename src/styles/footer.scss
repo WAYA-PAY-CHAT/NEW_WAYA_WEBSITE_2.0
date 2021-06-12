@@ -70,6 +70,14 @@
             font-size: 14px;
             line-height: 100%;
             color: #FF4400;
+            a{
+                display: inline;
+                cursor: pointer;
+                color: #FF4400;
+            }
+            a:hover{
+                color: #ff4400af;
+            }
         }
     }
 }

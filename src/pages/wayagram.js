@@ -2,6 +2,7 @@ import '../styles/wayagram.scss'
 import SingleBox from '../componentParts/singleBox'
 import {useState} from 'react'
 import PageFooter from '../componentParts/footer'
+import TopNav from '../componentParts/topNav'
 
 function WayaGram(){
     const [longText, setLongText] = useState('Connect with friends, share what you’re uo to, or see what’s new from others all over the world. Explore our community where you can feel free to be yourself and share everything from your daily moments to life’s hignlights.')
@@ -49,6 +50,7 @@ function WayaGram(){
     ])
     return (     
        <div>
+           <TopNav/>
             <div className="jumbotron wayagramJumbotron py-4 mb-0" style={{backgroundImage: 'url(/Ellipse.png)'}}>
                 <div className="py-1 row justify-content-center">
                     <div className='col-md-5 pt-4 pr-2'>

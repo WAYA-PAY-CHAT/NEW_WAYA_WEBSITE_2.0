@@ -1,11 +1,14 @@
 import PageFooter from '../componentParts/footer'
+import TopNav from '../componentParts/topNav'
 import '../styles/wayapay.scss'
 
 function WayaPay(){
     return (
-        <div id="wayaPayPage" className="">
-            <div className="jumbotron wayapayJumbotron py-4 mb-1" style={{backgroundImage: 'url(/Ellipse.png)'}}>
-                <div className="py-1 row justify-content-center">
+        <div>
+            <TopNav/>
+            <div id="wayaPayPage" className="">
+            <div className="jumbotron wayapayJumbotron pb-4 mb-1" style={{backgroundImage: 'url(/Ellipse.png)'}}>
+                <div className="pb-1 row justify-content-center">
                     <div className='col-md-5 pt-4 '>
                         <h2 className="">Send money to friends and family or get payments from your customers</h2>
                         <p className='pt-2'>Waya PayChat digital wallet is an all - in - one platform to perform safe and secure transactions, pay your bills and socialize with friends and family.</p>
@@ -69,6 +72,7 @@ function WayaPay(){
                 </div>
             </div>
             <PageFooter/>
+        </div>
         </div>
     )
 }

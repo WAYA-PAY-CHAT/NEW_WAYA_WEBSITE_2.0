@@ -2,6 +2,8 @@
 import SingleBox from '../componentParts/singleBox'
 import {useState} from 'react'
 import PageFooter from '../componentParts/footer'
+import TopNav from '../componentParts/topNav'
+import '../styles/wayachat.scss'
 
 function WayaChat(){
     const [longText, setLongText] = useState('With WayaChat, you’ll get fast, simple, secure messaging and calling for free, available on andriod phones all over the world')
@@ -35,16 +37,17 @@ function WayaChat(){
         }
     ])
     return (     
-       <div>
-            <div className="jumbotron wayagramJumbotron py-4 mb-0" style={{backgroundImage: 'url(/Ellipse.png)'}}>
-                <div className="py-1 row justify-content-center">
-                    <div className='col-md-5 pt-4 pr-2'>
+       <div id='wayachat'>
+           <TopNav/>
+            <div className="jumbotron wayagramJumbotron py-1 mb-0" style={{backgroundImage: 'url(/Ellipse.png)'}}>
+                <div className=" row justify-content-center">
+                    <div className='col-md-5 pt-4 pr-2 mr-4'>
                         <h2 className="">{headerText}</h2>
                         <p className='pt-2'>{longText}</p>
-
+                        <p className='lighter'>Data Charges may apply. Contact your provider for details</p>
                     </div>
-                    <div className="col-md-4">
-                        <img src='/socialize.png' alt='Socialize Jumbotron'/>
+                    <div className="col-md-4 ml-4">
+                        <img src='/about6.png' alt='Socialize Jumbotron'/>
                     </div>
                 </div>
             </div>

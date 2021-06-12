@@ -1,11 +1,13 @@
 import PageFooter from '../componentParts/footer'
 import GenericJumbotron from '../componentParts/genericJumbotron'
+import TopNav from '../componentParts/topNav'
 import '../styles/home.scss'
 // import {useState} from 'react'
 
 function Home(){
     return (     
        <div id='homesection'>
+           <TopNav className='mb-4'/>
             <div className="home-jumbotron py-4 " style={{backgroundImage: 'url(/grain.png)'}}>
                 <div className="py-4 row">
                     <div className='col-md-6 pt-4 mt-4'>

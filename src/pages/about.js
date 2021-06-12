@@ -1,10 +1,13 @@
 import PageFooter from '../componentParts/footer'
 import GenericJumbotron from '../componentParts/genericJumbotron'
+import TopNav from '../componentParts/topNav'
 import '../styles/about.scss'
 
 function About(){
     return (     
-       <div id='aboutsection' >
+        <div>
+            <TopNav />
+            <div id='aboutsection' >
             <GenericJumbotron titleText='ABOUT US'/>
 
             <div id='aboutGrid' className='pb-4 mb-4 px-4 mx-2'>
@@ -88,6 +91,7 @@ Meet new people, Post pictures and videos, create groups, advertise your product
             <img src='/chatting.png' alt='chat icon'/>
            <PageFooter/>
        </div>
+        </div>
     )
 }
 

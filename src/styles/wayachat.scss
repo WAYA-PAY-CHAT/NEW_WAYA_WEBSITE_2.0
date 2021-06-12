@@ -1,0 +1,39 @@
+#wayachat{
+    .wayagramJumbotron{
+        img{
+            max-width: 80%;
+            transform: rotate(12deg);
+        }
+    }
+}
+
+.lighter{
+    font-family: 'Sarabun', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 160%;
+    color: #BDBDBD;
+}
+
+@media only screen and (max-width: 425px){
+    #wayachat{
+        div.wayagramJumbotron{
+            background-color: #fff;
+            background-image: none !important;
+            h2{
+              font-family: 'Open Sans', sans-serif;
+              font-weight: bold;
+              font-size: 23px;
+        
+             }
+             h2+p{
+              font-size: 13px;
+             }
+            img{
+                max-width: 50% !important;
+                margin-left: 44px;
+            }
+          }
+    }
+
+}

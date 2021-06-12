@@ -27,15 +27,6 @@ div.wayagramJumbotron{
     }
   }
 
-  .theGrids{
-    justify-content: center;
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-   
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-  }
-  
   .singleBox{
     padding-top: 15%;
     padding-bottom: 36px !important;
@@ -61,3 +52,24 @@ div.wayagramJumbotron{
         max-width: 130px !important;
     }
   }
+
+  @media only screen and (max-width: 425px){
+    div.wayagramJumbotron{
+        background-color: #fff;
+        background-image: none !important;
+        h2{
+          font-family: 'Open Sans', sans-serif;
+          font-weight: bold;
+          font-size: 23px;
+    
+         }
+         h2+p{
+          font-size: 13px;
+         }
+        img{
+            max-width: 250px !important;
+            text-align: center;
+            margin-left: 30px;
+        }
+      }
+}

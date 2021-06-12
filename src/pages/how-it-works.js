@@ -1,6 +1,7 @@
 import '../styles/howitworks.scss'
 import {useEffect} from 'react'
 import PageFooter from '../componentParts/footer';
+import TopNav from '../componentParts/topNav';
 
 function HowItWorks(){
 
@@ -28,6 +29,8 @@ function HowItWorks(){
     }, [])
 
     return (     
+    <div>
+        <TopNav />
        <div id='howitworkssection'>
            <div className='videoSection'>
            <video controls>
@@ -257,6 +260,7 @@ We stores all personal data at a secure location and we do not disclose any pers
                 </div>
            </div>
            <PageFooter/>
+       </div>
        </div>
     )
 }

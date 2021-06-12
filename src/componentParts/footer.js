@@ -14,13 +14,19 @@ and our services, check our FAQ or contact our Customer Support</p>
     <button type='submit' className='orange'>Contact Us <span><img src='/rightArr.png' /></span></button>
     </div>
     <div className='col ml-4 pt-1 pl-4'>
+        <a href='https://twitter.com/wayapaychat' target='_blank'>
         <img src='/twitter.png' style={{maxWidth: '50%'}} alt='twitter'/>
+        </a>
     </div>
     <div className='col'>
-        <img src='/facebook.png' style={{maxWidth: '30%'}}  alt='facebook'/>
+    <a href='https://web.facebook.com/wayapaychat' target='_blank'>
+    <img src='/facebook.png' style={{maxWidth: '30%'}}  alt='facebook'/>
+    </a>
     </div>
     <div className='col'>
+        <a href='https://instagram.com/wayapaychat'  target='_blank'>
         <img src='/instagram.png' style={{maxWidth: '55%'}}  alt='instagram'/>
+        </a>
     </div>
     <div className='col'>
         <img src='/linkedin.png' style={{maxWidth: '55%'}}  alt='linkedin'/>
@@ -39,10 +45,18 @@ and our services, check our FAQ or contact our Customer Support</p>
                     <p className='col'>
 Copyright &copy; Waya 2020  All rights reserved</p>
                     <ul className='col'>
-                        <li>About Us</li>
+                        <li>
+                        <a className="nav-link" href="/about">
+                            About Us
+                        </a>
+                        </li>
                         <li>Terms of use</li>
                         <li>Privacy Policy</li>
-                        <li>Contact Us</li>
+                        <li>
+                        <a className="nav-link" href="/contact">
+                            Contact Us
+                        </a>
+                        </li>
                     </ul>
                 </div>
             </div>

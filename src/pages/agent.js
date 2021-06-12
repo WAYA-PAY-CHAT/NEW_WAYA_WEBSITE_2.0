@@ -1,25 +1,32 @@
 import PageFooter from '../componentParts/footer'
+import TopNav from '../componentParts/topNav'
 import '../styles/agent.scss'
 
 function Agent(){
     return (     
-       <div id='agentsection' >
-            <div className="about-jumbotron py-4 mb-4 pl-4 pb-2">
-                <div className="py-4 ml-4 pl-4 row justify-content-center">
-                    <div className='col-md-5 pt-4 pl-4 mt-4'>
+        <div>
+            <TopNav/>
+             <div id='agentsection' >
+            <div className="about-jumbotron pb-4 mb-4 pl-4 pb-2">
+                <div className="pb-4 row justify-content-center">
+                    <div className='col-md-5 pt-4'>
                         <div className='pb-4'>
                         <h1 className="">earn more with waya</h1>
                         <p>
                         Earn upto 10 naira for each customer you invite to WayPay</p>
                         </div>
-                        <div className='row mt-4'>
-                            <img alt='Google Play Download' src='/google-play-badge.png' className='col-md-4'/>
-                            <img alt='App Store Download' src='/app-store-badge.png' className='col-md-4'/>
-                        </div>
                     </div>
                     <div className='col-md-6'>
-                        <img src='/operate.png' alt='banner pic'/>
+                        <img src='/operate.png' alt='banner'/>
                     </div>
+                </div>
+                <div className='row socials justify-content-start pl-4 ml-1'>
+                            <div  className='col-sm-3 col-md-3 col-lg-2'>
+                            <img alt='Google Play Download' src='/google-play-badge.png'/>
+                            </div>
+                            <div className='col-sm-3 col-md-3 col-lg-2'>
+                            <img alt='App Store Download' src='/app-store-badge.png'/>
+                            </div>
                 </div>
             </div>
             <div className='banner-two pt-4 container-fluid'>
@@ -28,10 +35,10 @@ function Agent(){
                 <img src='/range.png' className='col-sm-12' alt='Waya Agent Options'/>
                 </div>
             </div>
-            <div className='last-banner pt-4 container-fluid'>
-            <div className="bottom-jumbotron mb-1 pl-4 ">
-                <div className="py-4 ml-4 pl-4 row justify-content-center">
-                    <div className='col-md-5 pt-4 pl-4 mt-4'>
+            <div className='last-banner pt-0'>
+            <div className="bottom-jumbotron mb-1">
+                <div className="py-4 row justify-content-center">
+                    <div className='col-sm-12 col-lg-5 pt-4 pl-4 mt-4'>
                         <div className='pb-4'>
                         <h5 className="text-center">How to join</h5>
                        <div className=' justify-content-center last-banner-phones'>
@@ -57,7 +64,7 @@ function Agent(){
                        </div>
                         </div>
                     </div>
-                    <div className='col-md-6 pt-4 mt-4'>
+                    <div className='col-sm-12 top-timeline col-lg-6 pt-4 mt-4'>
                     <h5 className="">be your own boss</h5>
                         <p>
                         Earn upto 10 naira for each customer you invite to WayPay</p>
@@ -83,25 +90,30 @@ function Agent(){
                     </div>
                 </div>
             </div>
-            <div className='ending container-fluid'  style={{backgroundImage:'url(/wave.png)'}}>
+            <div className='ending container-fluid '  style={{backgroundImage:'url(/wave.png)'}}>
             <div className="row justify-content-center">
-                    <div className='col-md-6 pt-4 pr-0 pl-4 mt-4'>
-                        <div className='pb-4'>
+                    <div className='col-sm-8 col-md-6 pt-4 pb-4 pr-0 pl-4 mt-4'>
+                        <div className='pb-md-4'>
                         <h2 className="">sign up now to join for free</h2>
                         </div>
-                        <div className='row mt-4'>
-                            <img alt='Google Play Download' src='/google-play-badge.png' className='col-md-3'/>
-                            <img alt='App Store Download' src='/app-store-badge.png' className='col-md-3'/>
+                        <div className='row justify-content-left last-socials mt-4'>
+                            <div className='col-md-5 col-sm-3'>
+                            <img alt='Google Play Download' src='/google-play-badge.png' />
+                            </div>
+                            <div className='col-md-5 col-sm-3'>
+                            <img alt='App Store Download' src='/app-store-badge.png' />
+                            </div>
+                           
                         </div>
                     </div>
-                    <div className='col-md-5 pl-0'>
+                    <div className='col-sm-3 col-md-5 pl-0 lastphone'>
                         <img src='/wayaphone.png' alt='banner pic'/>
                     </div>
                 </div>
             </div>
-            <section className='container-fluid'>
+            <section className='container-fluid last-form'>
                 <h4 className='text-center'>sign up now as an Agent</h4>
-                <form>
+                <form className='pb-4'>
                 <label>Name</label> <br/>
                     <div className='inputGroup row justify-content-between ml-0'>
                        
@@ -111,10 +123,11 @@ function Agent(){
                     </div>
                     <div className='row'>
                     <label for='email' className='col-sm-7'>Email</label>
-                    <label for='email' className='col pl-2'>Phone</label>
+                    <label for='email' className='col pl-2 desktopView'>Phone</label>
                     </div>
                     <div className='inputGroup row justify-content-between ml-0'>
                     <input type='email'  className='col-sm-5' placeholder='Email' required />
+                    <label for='email' className='col pl-2 mobileView'>Phone</label>
                     <input type='tel'  className='col-sm-5' placeholder='Phone Number' required />
                     </div>
                     <label >Address  </label>
@@ -137,6 +150,7 @@ function Agent(){
             </div>
             <PageFooter/>
        </div>
+        </div>
     )
 }
 

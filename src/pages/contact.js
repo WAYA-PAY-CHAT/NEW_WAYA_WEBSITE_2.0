@@ -1,9 +1,12 @@
 import PageFooter from '../componentParts/footer'
+import TopNav from '../componentParts/topNav'
 import '../styles/contact.scss'
 
 function Contact(){
     return (
-        <div id="contactPage" className="row pt-4 justify-content-start">
+      <div>
+          <TopNav/>
+          <div id="contactPage" className="row pt-4 justify-content-start">
             <div className="col-sm-9 col-md-6 text-start">
                 <h3>Contact Us</h3>
                 <p className="py-4">You are welcome to reach us at any of the contacts below</p>
@@ -47,6 +50,7 @@ function Contact(){
             </div>
             <PageFooter/>
         </div>
+      </div>
     )
 }
 

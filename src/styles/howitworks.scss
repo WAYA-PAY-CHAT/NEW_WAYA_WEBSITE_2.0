@@ -1,4 +1,5 @@
-.videoSection{
+#howitworkssection{
+  .videoSection{
     text-align: center;
     padding-top: 10%;
     padding-bottom: 6%;
@@ -73,14 +74,17 @@
      padding-right: 10px;
     }
   }
+}
 
   @media only screen and (max-width: 768px) {
-    .videoSection{
+    #howitworkssection{
+      .videoSection{
         padding-top: 6%;
         padding-bottom: 5%;
         video{
             width: 80vw;
             height: 60vh;
         }
+    }
     }
   }

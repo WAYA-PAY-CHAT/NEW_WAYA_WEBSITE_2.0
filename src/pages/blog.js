@@ -1,6 +1,7 @@
 import '../styles/blog.scss'
 import {useState} from 'react'
 import PageFooter from '../componentParts/footer'
+import TopNav from '../componentParts/topNav'
 
 function Blog(){
     const [posts, setposts] = useState([
@@ -54,7 +55,9 @@ function Blog(){
         },
     ])
     return (     
-       <div id='blog' style={{backgroundImage: 'url(/radial.png)'}}>
+        <div>
+            <TopNav/>
+            <div id='blog' style={{backgroundImage: 'url(/radial.png)'}}>
             <div className="blog-jumbotron pb-4 mb-4" >
                 <div className="py-4 text-center">
                     <div className='pt-4 mt-4'>
@@ -98,6 +101,7 @@ function Blog(){
             </div>
             <PageFooter/>
        </div>
+        </div>
     )
 }
 
