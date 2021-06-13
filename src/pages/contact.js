@@ -4,29 +4,35 @@ import '../styles/contact.scss'
 
 function Contact(){
     return (
-      <div>
+      <div id="contactPage">
           <TopNav/>
-          <div id="contactPage" className="row pt-4 justify-content-start">
-            <div className="col-sm-9 col-md-6 text-start">
+          <div className="row pt-4 pl-4 justify-content-start">
+            <div className="col-sm-10 col-md-6 text first">
                 <h3>Contact Us</h3>
-                <p className="py-4">You are welcome to reach us at any of the contacts below</p>
-                <address className='row'>
-                    <img src='/ion_home.png' alt='home icon' className='col-sm-3 pr-2 mt-md-1'/>
-                    <div className='col-sm-8 col-md-7'>
+                <p className="">You are welcome to reach us at any of the contacts below</p>
+                <address className='row '>
+                    <div className='col-sm-1 pr-2 mt-md-1'>
+                    <img src='/ion_home.png' alt='home icon' />
+                    </div>
+                    <div className='col-sm-9 ml-1 text'>
                         <h5>Head Office</h5>
                         <p>69 Seefeldstrasse, Zurich, Switzerland</p>
                     </div>
                 </address>
                 <address className='row'>
-                    <img src='/ion_home.png' alt='home icon' className='col-sm-3 pr-2 mt-md-1'/>
-                    <div className='col-sm-8 col-md-7'>
+                <div className='col-sm-1 pr-2 mt-md-1'>
+                    <img src='/ion_home.png' alt='home icon' />
+                    </div>
+                    <div className='col-sm-9 ml-1 text'>
                         <h5>African Hub Office</h5>
                         <p>5, Ogunsiji Close, By Adeboye Solanke Avenue, Off Allen Avenue, Ikeja, Lagos.</p>
                     </div>
                 </address>
                 <address className='row'>
-                    <img src='/send.png' alt='send icon'  className='col-sm-3 pr-2 mt-md-1'/>
-                    <div className='col-sm-8 col-md-7'>
+                <div className='col-sm-1 pr-2 mt-md-1'>
+                    <img src='/send.png' alt='send icon' />
+                    </div>
+                    <div className='col-sm-9 ml-1 text'>
                         <p>info@wayapaychat.com</p>
                     </div>
                 </address>
@@ -37,7 +43,7 @@ function Contact(){
                     </div>
                 </div>
             </div>
-            <div className="col-md-6 text-start">
+            <div className="col-sm-10 col-md-6 text-start">
                 <h4>Get in touch</h4>
                 <form className='pt-4' id='contactForm'>
                     <input type='text' placeholder='Name' required />

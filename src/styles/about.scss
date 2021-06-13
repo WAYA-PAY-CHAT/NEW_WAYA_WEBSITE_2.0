@@ -39,3 +39,40 @@
         cursor: pointer;
     }
 }
+
+@media only screen and (max-width: 768px){
+    #aboutsection{
+        #aboutGrid{
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 435px){
+    #aboutsection{
+        margin-top: -50px;
+        margin-left: -40px;
+        h1{
+            font-size: 14px;
+
+        }
+        p{
+            font-size: 13px;
+            width: 88%;
+            line-height: 24px;
+        }
+        #aboutGrid{
+            display: grid;
+            text-align:center;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        >img:last-of-type{
+            width: 30% !important;
+            position: absolute;
+            margin-top: -25%;
+            margin-left: 85%;
+            cursor: pointer;
+        }
+    }
+}
