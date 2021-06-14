@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/css/main.e0ff6d8d.chunk.css",
+    "main.js": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/js/main.67500217.chunk.js",
+    "main.js.map": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/js/main.67500217.chunk.js.map",
+    "runtime-main.js": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/js/runtime-main.35632694.js",
+    "runtime-main.js.map": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/js/runtime-main.35632694.js.map",
+    "static/css/2.150d169a.chunk.css": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/css/2.150d169a.chunk.css",
+    "static/js/2.308c6486.chunk.js": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/js/2.308c6486.chunk.js",
+    "static/js/2.308c6486.chunk.js.map": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/js/2.308c6486.chunk.js.map",
+    "static/js/3.35b2da62.chunk.js": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/js/3.35b2da62.chunk.js",
+    "static/js/3.35b2da62.chunk.js.map": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/js/3.35b2da62.chunk.js.map",
+    "index.html": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.e0ff6d8d.chunk.css.map": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/css/main.e0ff6d8d.chunk.css.map",
+    "static/js/2.308c6486.chunk.js.LICENSE.txt": "/WAYA-PAY-CHAT/NEW_WAYA_WEBSITE_2.0/static/js/2.308c6486.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.35632694.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.308c6486.chunk.js",
+    "static/css/main.e0ff6d8d.chunk.css",
+    "static/js/main.67500217.chunk.js"
+  ]
+}
