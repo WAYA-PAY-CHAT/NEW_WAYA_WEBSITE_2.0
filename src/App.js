@@ -24,34 +24,34 @@ function App() {
       <Route exact path="/">
       <Home/>
       </Route>
-      <Route path='/about'>
+      <Route exact path='/about'>
         <About/>
       </Route>
-      <Route path='/agent'>
+      <Route exact path='/agent'>
         <Agent/>
       </Route>
-      <Route path="/contact">
+      <Route exact path="/contact">
         <ContactPage />
       </Route>
-      <Route path='/merchant'>
+      <Route exact path='/merchant'>
       <MerchantPage/>
       </Route>
-      <Route path='/wayapay'>
+      <Route exact path='/wayapay'>
       <WayaPay/>
       </Route>
-      <Route path='/wayagram'>
+      <Route exact path='/wayagram'>
       <WayaGram/>
       </Route>
-      <Route path='/blog'>
+      <Route exact path='/blog'>
       <Blog/>
       </Route>
-      <Route path='/wayachat'>
+      <Route exact path='/wayachat'>
       <WayaChat/>
       </Route> 
-      <Route path='/signin'>
+      <Route exact path='/signin'>
       <SignIn/>
       </Route>
-      <Route path='/how-it-works'>
+      <Route exact path='/how-it-works'>
       <HowItWorks/>
       </Route>
       </Router>
