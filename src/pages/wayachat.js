@@ -1,6 +1,7 @@
 // import '../styles/wayachat.scss'
 import SingleBox from '../componentParts/singleBox'
 import {useState} from 'react'
+import Fade from 'react-reveal/Fade';
 import PageFooter from '../componentParts/footer'
 import TopNav from '../componentParts/topNav'
 import '../styles/wayachat.scss'
@@ -40,6 +41,7 @@ function WayaChat(){
        <div id='wayachat'>
            <TopNav/>
             <div className="jumbotron wayagramJumbotron py-1 mb-0" style={{backgroundImage: 'url(/Ellipse.png)'}}>
+            <Fade right>
                 <div className=" row justify-content-center">
                     <div className='col-md-5 pt-4 pr-2 mr-4'>
                         <h2 className="">{headerText}</h2>
@@ -50,7 +52,9 @@ function WayaChat(){
                         <img src='/about6.png' alt='Socialize Jumbotron'/>
                     </div>
                 </div>
+                </Fade>
             </div>
+            <Fade bottom cascade>
            <div className='theGrids pt-4 pb-4' style={{backgroundColor:'#F9F8F7'}}>
            {gridData.map(el => {
                 return <SingleBox bgColor={'white'}
@@ -59,6 +63,7 @@ function WayaChat(){
                  imageName={el.image}/>
            })}           
            </div>
+           </Fade>
            <PageFooter/>
        </div>
     )

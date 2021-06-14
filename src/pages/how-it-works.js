@@ -1,5 +1,7 @@
 import '../styles/howitworks.scss'
 import {useEffect} from 'react'
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 import PageFooter from '../componentParts/footer';
 import TopNav from '../componentParts/topNav';
 
@@ -32,12 +34,15 @@ function HowItWorks(){
     <div>
         <TopNav />
        <div id='howitworkssection'>
+           <Zoom>
            <div className='videoSection'>
            <video controls>
                 <source src="https://www.wayapaychat.com/wp-content/uploads/2020/01/Skype_Video2.mp4?_=1" type="video/mp4"/>
                 Your browser does not support the video tag.
                 </video>
            </div>
+           </Zoom>
+           <Fade right cascade>
            <div className='faqs mb-4'>
             <div className='mb-3'>
            <button class="accordion">Download Waya PayChat</button>
@@ -259,6 +264,7 @@ We stores all personal data at a secure location and we do not disclose any pers
                 </div>
                 </div>
            </div>
+           </Fade>
            <PageFooter/>
        </div>
        </div>

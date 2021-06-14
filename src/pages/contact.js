@@ -1,12 +1,14 @@
 import PageFooter from '../componentParts/footer'
 import TopNav from '../componentParts/topNav'
+import Fade from 'react-reveal/Fade';
 import '../styles/contact.scss'
 
 function Contact(){
     return (
       <div id="contactPage">
           <TopNav/>
-          <div className="row pt-4 pl-4 justify-content-start">
+          <div className="row actual-content pt-4 pl-4 justify-content-start">
+              <Fade right>
             <div className="col-sm-10 col-md-6 text first">
                 <h3>Contact Us</h3>
                 <p className="">You are welcome to reach us at any of the contacts below</p>
@@ -43,6 +45,8 @@ function Contact(){
                     </div>
                 </div>
             </div>
+            </Fade>
+            <Fade left>
             <div className="col-sm-10 col-md-6 text-start">
                 <h4>Get in touch</h4>
                 <form className='pt-4' id='contactForm'>
@@ -54,6 +58,7 @@ function Contact(){
                     <button type='submit' className='orange'>Send <span><img src='/rightArr.png' /></span></button>
                 </form>
             </div>
+            </Fade>
             <PageFooter/>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import PageFooter from '../componentParts/footer'
 import TopNav from '../componentParts/topNav'
+import Fade from 'react-reveal/Fade';
 import '../styles/wayapay.scss'
 
 function WayaPay(){
@@ -7,7 +8,9 @@ function WayaPay(){
         <div>
             <TopNav/>
             <div id="wayaPayPage" className="">
+           
             <div className="jumbotron wayapayJumbotron pb-4 mb-1" style={{backgroundImage: 'url(/Ellipse.png)'}}>
+            <Fade right>
                 <div className="pb-1 row justify-content-center">
                     <div className='col-md-5 pt-4 '>
                         <h2 className="">Send money to friends and family or get payments from your customers</h2>
@@ -17,7 +20,9 @@ function WayaPay(){
                         <img src='/wayaphone.png' alt='Waya Phone'/>
                     </div>
                 </div>
+                </Fade>
             </div>
+            <Fade bottom cascade>
             <div className='theGrids container pb-4'>
                 <div className='singleBox'>
                     <img src='/digital.png'/>
@@ -71,6 +76,7 @@ function WayaPay(){
                     <p>Request and receive money from friends and families, customers etc, using phone number through WayaPay</p>
                 </div>
             </div>
+            </Fade>
             <PageFooter/>
         </div>
         </div>

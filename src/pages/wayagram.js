@@ -1,6 +1,7 @@
 import '../styles/wayagram.scss'
 import SingleBox from '../componentParts/singleBox'
 import {useState} from 'react'
+import Fade from 'react-reveal/Fade';
 import PageFooter from '../componentParts/footer'
 import TopNav from '../componentParts/topNav'
 
@@ -52,6 +53,7 @@ function WayaGram(){
        <div>
            <TopNav/>
             <div className="jumbotron wayagramJumbotron py-4 mb-0" style={{backgroundImage: 'url(/Ellipse.png)'}}>
+            <Fade right>
                 <div className="py-1 row justify-content-center">
                     <div className='col-md-5 pt-4 pr-2'>
                         <h2 className="">Socialize</h2>
@@ -61,7 +63,9 @@ function WayaGram(){
                         <img src='/socialize.png' alt='Socialize Jumbotron'/>
                     </div>
                 </div>
+                </Fade>
             </div>
+            <Fade bottom cascade>
            <div className='theGrids pt-4 pb-4' style={{backgroundColor:'#F9F8F7'}}>
            {gridData.map(el => {
                 return <SingleBox bgColor={'white'}
@@ -70,6 +74,7 @@ function WayaGram(){
                  imageName={el.image}/>
            })}           
            </div>
+           </Fade>
            <PageFooter/>
        </div>
     )

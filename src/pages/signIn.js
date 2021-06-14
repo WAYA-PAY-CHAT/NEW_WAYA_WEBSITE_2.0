@@ -1,5 +1,6 @@
 import '../styles/signin.scss'
 import {useState} from 'react'
+import Rotate from 'react-reveal/Rotate';
 import PageFooter from '../componentParts/footer'
 import TopNav from '../componentParts/topNav'
 
@@ -41,6 +42,8 @@ function SignIn(){
            <TopNav/>
            <div id='signIn' style={{backgroundImage: 'url(loginBack.png)'}}>
             <div className={`${showLogin?'hiding':'showing'}`}> 
+            <Rotate top right when={!showLogin}>
+
             <div id='loginSection' className='login row justify-content-center' >
             <form>
                 <div className='text-center pb-2'>
@@ -76,10 +79,13 @@ function SignIn(){
                 </div>
                 </div>
             </form>
+           
         </div> 
+        </Rotate>
             </div>
             
             <div className={`${!showLogin?'hiding':'showing'}`}>
+            <Rotate bottom left when={showLogin}>
             <div id='signUp' className='row align-items-center justify-content-center'>
                 <div className='col-sm-4 part-text'>
                     <h3>
@@ -136,6 +142,7 @@ function SignIn(){
                 </form>
                 </div>
             </div>  
+            </Rotate>
             </div>
             <PageFooter/>
        </div>

@@ -1,6 +1,8 @@
 import PageFooter from '../componentParts/footer'
 import GenericJumbotron from '../componentParts/genericJumbotron'
 import TopNav from '../componentParts/topNav'
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 import '../styles/about.scss'
 
 function About(){
@@ -9,7 +11,7 @@ function About(){
             <TopNav />
             <div id='aboutsection' >
             <GenericJumbotron titleText='ABOUT US'/>
-
+            <Fade bottom cascade>
             <div id='aboutGrid' className='pb-4 mb-4 px-4 mx-2'>
             <div>
                     <img src='/about1.png'/>
@@ -88,6 +90,7 @@ Meet new people, Post pictures and videos, create groups, advertise your product
                     </div>
                 </div>
             </div>
+            </Fade>
             <img src='/chatting.png' alt='chat icon'/>
            <PageFooter/>
        </div>

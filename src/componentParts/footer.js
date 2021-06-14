@@ -1,10 +1,12 @@
-
+import Fade from 'react-reveal/Zoom';
 import '../styles/footer.scss'
 
 function PageFooter(){
     return (     
         <footer>
+            <Fade right cascade>
             <div className='top row' style={{backgroundImage: 'url(/chat.png)'}}>
+                <Fade right cascade>
                 <div className='col mr-4 justify-content-between'>
                     <h4>Customer Support</h4>
                     <p>If you have any questions or want to know more about Waya PayChat
@@ -40,6 +42,7 @@ and our services, check our FAQ or contact our Customer Support</p>
                 <input type='text' placeholder='Enter your email address'/>
                 <button type='submit'>Subscribe</button>
                 </div>
+                </Fade>
             </div>
             <div className='bottom container pt-4'>
                 <hr className='pt-4 mt-4'/>
@@ -70,6 +73,7 @@ Copyright &copy; Waya 2020  All rights reserved</p>
                     </ul>
                 </div>
             </div>
+            </Fade> 
         </footer> 
     )
 }

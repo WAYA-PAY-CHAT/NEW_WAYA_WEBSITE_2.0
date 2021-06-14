@@ -1,6 +1,8 @@
 import PageFooter from '../componentParts/footer'
 import GenericJumbotron from '../componentParts/genericJumbotron'
 import TopNav from '../componentParts/topNav'
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 import '../styles/home.scss'
 // import {useState} from 'react'
 
@@ -10,6 +12,7 @@ function Home(){
            <TopNav className='mb-4'/>
             <div className="home-jumbotron py-4 " style={{backgroundImage: 'url(/grain.png)'}}>
                 <div className="py-4 row">
+                <Fade left>
                     <div className='col-md-6 pt-4 mt-4'>
                         <h1 className="">TRANSACT, SOCIALIZE, CHAT AND CALL
 FOR FREE.</h1>
@@ -24,16 +27,20 @@ FOR FREE.</h1>
                             </button>
                         </div>
                     </div>
-                    {/* <div className="col" style={{position:'relative'}}> */}
+                    </Fade>
+                    <Fade right>
                         <img src='/twoPhones.png' className="col" alt='jumbotron'/>
-                    {/* </div> */}
+                    </Fade>
                 </div>
             </div>
+            <Fade bottom>
             <div className='genericJumbo'>
             <GenericJumbotron titleText='About Waya PayChat' />
             </div>
+            </Fade>
             <section className='categories'>
                 <div className='row justify-content-center text-center'>
+                    <Fade bottom>
                     <div className='col-sm-12 col-md-4 mt-3'>
                         <img src='/bills.png' alt='Pay Bills' className='pb-2'/>
                         <h6 className='py-4'>Bills Payment</h6>
@@ -56,6 +63,7 @@ PHONE NUMBER OR QR CODE</h6>
                         The next big thing is on WayaGram and you don’t want to miss it. Chat, call capture and share amazing moments with your friends and family.
                         </p>
                     </div>
+                    </Fade>
                 </div>
                 <button className='floatChat'>
                 <img src='/chatting.png' alt='Chat' />
@@ -64,9 +72,12 @@ PHONE NUMBER OR QR CODE</h6>
             <section className='features text-center' style={{backgroundImage: 'url(/grain.png)'}}>
                 <h4>Waya PayChat Unique Features</h4>
                 <div className='infographic row'>
+                <Fade big>
                     <div className='col' className='singlePhone'>
                         <img src='/singlePhone.png'/>
                     </div>
+                    </Fade>
+                    <Fade right cascade>
                     <div className='col'>
                         <div className='special-row'>
                         <div className=''>
@@ -135,9 +146,11 @@ PHONE NUMBER OR QR CODE</h6>
                         </div>
                         </div>
                     </div>
+                    </Fade>
                 </div>
             </section>
             <section className='features-two row'>
+                <Fade right cascade>
                 <ul className="timeline col">
                     <li className="timeline-item">
                         <div className="timeline-arrow"></div>
@@ -161,13 +174,17 @@ PHONE NUMBER OR QR CODE</h6>
                         </div>
                     </li>
                 </ul>
+                </Fade>
+                <Zoom>
                 <div className='col thevideoSection'>
            <video controls>
                 <source src="https://www.wayapaychat.com/wp-content/uploads/2020/01/Skype_Video2.mp4?_=1" type="video/mp4"/>
                 Your browser does not support the video tag.
                 </video>
            </div>
+           </Zoom>
             </section>
+            <Zoom>
             <div className="last-jumbotron pt-1 container mb-4" style={{backgroundImage: 'url(/grain.png)'}}>
                 <div className=" row">
                     <div className='col-md-3 col-lg-4'>
@@ -183,6 +200,7 @@ PHONE NUMBER OR QR CODE</h6>
                     </div>
                 </div>
             </div>
+            </Zoom>
             <PageFooter />
        </div>
     )

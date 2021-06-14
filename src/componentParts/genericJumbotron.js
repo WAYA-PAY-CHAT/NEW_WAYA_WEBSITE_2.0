@@ -1,9 +1,11 @@
 import '../styles/genericjumbotron.scss'
+import Fade from 'react-reveal/Fade';
 
 function GenericJumbotron(props){
     return (     
         <div className="about-jumbotron py-4 mb-4 pl-4 pb-2" style={{backgroundImage: 'url(/grain.png)'}}>
                 <div className="py-4 ml-4 pl-4 row">
+                    <Fade right cascade>
                     <div className='col-md-9 pt-4 pl-4 mt-4 textArea' style={{
                         backgroundImage:'url(/chat.png)'
                     }}>
@@ -13,6 +15,7 @@ function GenericJumbotron(props){
                         <p>
                         We are committed to providing a secure and cashless payment solution that assists our users, merchants, and organizations, to optimize their daily lives and business processes while taking care of their transactions.</p>
                     </div>
+                    </Fade>
                 </div>
             </div>
 

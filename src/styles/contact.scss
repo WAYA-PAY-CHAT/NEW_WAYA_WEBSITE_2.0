@@ -1,5 +1,8 @@
 #contactPage{
     margin-bottom: 7em;
+    .actual-content{
+        margin-left: 4em;
+    }
     h3, h4 {
         color: #FF4400;
         font-family: 'Open Sans', sans-serif;
@@ -96,6 +99,9 @@ form#contactForm{
 
 @media only screen and (max-width: 425px){
     #contactPage{
+        .actual-content{
+            margin-left: 0em;
+        }
       div.first{
           padding-right: 10%;
           padding-top: -4%;
