@@ -5,6 +5,9 @@
     padding: 4% 9%;
     background-position-x: 90%;
     color: #fff;
+    .socials{
+        align-items: flex-end;
+    }
     h4{
         font-family: 'Open Sans', sans-serif;
         font-weight: bold;
@@ -65,7 +68,7 @@
             list-style-type: none;
             padding-inline-end: 30px;
             display: inline;
-            font-family: Sarabun;
+            font-family: 'Sarabun', sans-serif;
             font-weight: bold;
             font-size: 14px;
             line-height: 100%;
@@ -82,10 +85,61 @@
     }
 }
 
-
-
 @media only screen and (max-width: 768px){
     footer{
         text-align: center;
+        input{
+            border-radius: 5px !important;
+            align-items: flex-end;
+            width:35vw !important;
+            padding-left: 15px !important;
+        }
+        input+button{
+            width: 35vw !important;
+            border-radius: 5px !important;
+            margin-top: 5%;
+        }
+        .socials{
+            margin-top: 5%;
+            align-items: flex-end;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    footer{
+        .inputs{
+            max-width: 100vw !important;
+        }
+        .top{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        input{
+         
+            width:50vw !important;
+           
+        }
+        input+button{
+          
+            width:30vw !important;
+        }
+        .bottom div.row{
+            text-align: left;
+            margin-top: -35px !important;
+            p{
+                order: 4;
+               padding-left: 30px;
+            }
+            >ul{
+                order: 2;
+               
+                li{
+                    line-height: 280%;
+                    padding-left: 0 !important;
+                    display: block;
+                }
+          }
+        }
     }
 }

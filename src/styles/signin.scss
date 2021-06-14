@@ -48,12 +48,6 @@
     }
 }
 
-// input[type='password']{
-//     background-repeat: no-repeat;
-//     background-position: right;
-//     background-position-x: 95%;
-// }
-
 input{
     background-color: white !important;
     border: 0.4px solid #BABABA  !important;
@@ -154,3 +148,131 @@ button.socialBtn:hover, input:focus{
         }
     }
 }
+
+@media only screen and (max-width: 768px){
+        .login form{
+            width: 100vw;
+            border-radius: 0px;
+            .inputGroup{
+                padding-left: 12em;
+                position: relative;
+                span.iconeye{
+                    cursor: pointer;
+                       position:absolute;
+                       top:13%;
+                       right: 31%;
+                   }
+            }
+            .loginContinue{
+                margin-right:180px !important;
+            }
+            .loginSocial{
+                margin-right:180px !important;
+            }
+            .single{
+                margin-right: 22vw !important;
+            }
+        }
+    #signIn{
+        padding-top: 0px;
+        #signUp{
+            
+            justify-content: start !important;
+            form{
+                border-radius: 0 !important;
+            }
+            .part-text{
+                display: none;
+            }
+            form{
+                width: 130vw;
+                padding-left: 30%;
+            }
+            .continueText{
+                margin-right:410px !important;
+            }
+            .sociallinks{
+                margin-right:400px !important;
+            }
+            button.socialBtn{
+                max-width: 200px !important;
+               
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .login form{
+        .inputGroup{
+            padding-left: 0.5em;
+            margin-right: 1vw;
+            position: relative;
+            span.iconeye{
+                cursor: pointer;
+                   position:absolute;
+                   top:12%;
+                   right: 5%;
+               }
+        }
+        .loginContinue{
+            margin-right:0px !important;
+        }
+        .loginSocial{
+            margin-right:0px !important;
+            width: 110vw;
+        }
+        button.socialBtn{
+            max-width: 170px !important;
+           
+        }
+        .single{
+            margin-right: 2vw !important;
+        }
+    }
+
+    #signIn{
+        #signUp{
+            form{
+                width: 100vw;
+                padding-left: 6% !important;
+                .inputGroup{
+                    input{
+                        width: 90vw !important;
+                    }
+                    span.iconeye{
+                        cursor: pointer;
+                           position:absolute;
+                           top:20%;
+                           right: 10%;
+                       }
+                }
+                .name{
+                    width: 90vw;
+                    input{
+                        height: 50px;
+                        width: 100%;
+                     
+                    }
+                    input:first-of-type{
+                        margin-bottom: 25px;
+                    }
+                    input:nth-of-type(2){
+                        margin-left: -1px !important;
+                    }
+                }
+                button#signupBtn{
+                    width: 90vw !important;
+                }
+                .continueText{
+                    width: 90vw;
+                    margin-left: 10px;
+                }
+                .sociallinks{
+                    width: 100vw;
+                }
+               
+            }
+        }
+    }
+}   

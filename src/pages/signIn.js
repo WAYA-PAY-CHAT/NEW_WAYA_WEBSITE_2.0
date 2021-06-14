@@ -60,10 +60,10 @@ function SignIn(){
                 <div className=' mt-3'>
                 <button type='submit' id='loginBtn' className='orange '>Sign In <span><img src='/rightArr.png' /></span></button>
                 </div>
-                <div className='row justify-content-center pl-0 pr-4 mr-4'>
+                <div className='row justify-content-center loginContinue pl-0 pr-4 mr-4'>
                 <p style={{color:'#2626BC', fontSize: '13px'}} className='py-3 col-sm-9 text-center pl-4'>Or continue with</p> 
                 </div>
-                <div className='justify-content-center row mr-2'>
+                <div className='justify-content-center loginSocial row mr-2'>
                     <button className='col-sm-5 btn pl-0 mr-4 socialBtn'>
                         <span className='pr-3'><img src='fbIcon.png'/> </span>Facebook
                     </button>
@@ -81,7 +81,7 @@ function SignIn(){
             
             <div className={`${!showLogin?'hiding':'showing'}`}>
             <div id='signUp' className='row align-items-center justify-content-center'>
-                <div className='col-sm-4'>
+                <div className='col-sm-4 part-text'>
                     <h3>
                     We are committed to providing a secure and cashless payment solution
                     </h3>
@@ -121,10 +121,10 @@ function SignIn(){
                     <div className=' mt-3'>
                     <button type='submit' id='signupBtn' className='orange '>Sign Up <span><img src='/rightArr.png' /></span></button>
                     </div>
-                    <div className='row justify-content-center pl-0 pr-4 mr-4'>
+                    <div className='row justify-content-center continueText pl-0 pr-4 mr-4'>
                     <p style={{color:'#2626BC', fontSize: '13px'}} className='pt-3 mr-3 col-sm-9 text-center'>Or continue with</p> 
                     </div>
-                    <div className='justify-content-center row mr-2'>
+                    <div className='justify-content-center row mr-2 sociallinks'>
                         <button className='col-sm-5 btn pl-0 mr-4 socialBtn'>
                             <span className='pr-3'><img src='fbIcon.png'/> </span>Facebook
                         </button>

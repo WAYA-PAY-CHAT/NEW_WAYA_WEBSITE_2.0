@@ -14,7 +14,7 @@ function Home(){
                         <h1 className="">TRANSACT, SOCIALIZE, CHAT AND CALL
 FOR FREE.</h1>
                         <p className=''>Waya Paychat digital wallet is an all-in-one platform to perform safe and secure transactions, pay your bills and socialize with friends and family, making calls, chats and sharing personal moments.</p>
-                        <div className='row mt-3'>
+                        <div className='row mt-3 bannerLinks'>
                             <img alt='Google Play Download' src='/google-play-badge.png' className='col-md-4'/>
                             <img alt='App Store Download' src='/app-store-badge.png' className='col-md-4'/>
                         </div>
@@ -29,7 +29,9 @@ FOR FREE.</h1>
                     {/* </div> */}
                 </div>
             </div>
+            <div className='genericJumbo'>
             <GenericJumbotron titleText='About Waya PayChat' />
+            </div>
             <section className='categories'>
                 <div className='row justify-content-center text-center'>
                     <div className='col-sm-12 col-md-4 mt-3'>
@@ -70,7 +72,7 @@ PHONE NUMBER OR QR CODE</h6>
                         <div className=''>
                         <img src='/safensecure.png' />
                         </div>
-                        <div className=''>
+                        <div className='theTexts'>
                             <h6>Safe and Secure</h6>
                             <p>
                             Transactions are safe and secure when you send and receive money and our fees are low (10N).
@@ -168,10 +170,10 @@ PHONE NUMBER OR QR CODE</h6>
             </section>
             <div className="last-jumbotron pt-1 container mb-4" style={{backgroundImage: 'url(/grain.png)'}}>
                 <div className=" row">
-                    <div className='col-md-4'>
+                    <div className='col-md-3 col-lg-4'>
                         <img src='/phoneinhand.png' alt='Phone in hand'/>
                     </div>
-                    <div className='col pt-4 mt-4'>
+                    <div className='col'>
                         <h1 className="">Download <br/> the app</h1>
                         <p className='py-2'>Download Waya PayChat and start enjoying our great features.</p>
                         <div className='row mt-3'>

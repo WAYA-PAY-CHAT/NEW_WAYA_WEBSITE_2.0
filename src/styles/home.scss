@@ -32,7 +32,7 @@
        position: absolute;
        max-width: 48%;
        right: 8%;
-       top: -1%;
+       top: 16%;
    }
 }
 
@@ -70,7 +70,7 @@ section.categories{
 section.features{
     background-color: #FF4400;
     background-blend-mode: darken;
-    height: 1000px;
+    height: auto;
     padding-top: 4%;
     h4{
         color: #fff;
@@ -243,5 +243,158 @@ section.features{
         line-height: 150%;
         color: #FFFFFF;
         max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #homesection{
+        .home-jumbotron{
+            margin-top: -80px !important;
+            .goDown{
+                display: none;
+            }
+           h1{
+            font-size: 35px;
+           }
+           h1+p{
+            font-size: 13px;
+            line-height: 180%;
+           }
+           img[alt='jumbotron']{
+            max-width: 68%;
+            right: 10vw;
+            top: 76vh;
+        }
+        }
+        .home-jumbotron .bannerLinks{
+
+            > img {
+                height: 42.5px;
+                max-width: 170px !important;
+               
+            }
+        }
+        .genericJumbo{
+            margin-top: 80vh;
+        }
+        section.features {
+            padding: 0 1% !important;
+            h4{
+                padding-top: 4%;
+            }
+            .infographic{
+                margin: 0% auto;
+                padding: 1em 10em;
+                .singlePhone{
+                    display: none;
+                }  
+            }
+        }
+        .features-two{
+            .thevideoSection{
+               
+                video{
+                    width: 80vw !important;
+                    height: 60vh;
+                }
+            }
+        }
+        .last-jumbotron{
+            padding-top: 0%;
+            .col{
+                padding-bottom: 8%;
+                 img {
+                    height: 42.5px;
+                    max-width: 180px !important;
+                   
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 435px){
+    #homesection{
+        .home-jumbotron{
+            margin-top: -80px !important;
+            .goDown{
+                display: none;
+            }
+           h1{
+            font-size: 35px;
+           }
+           h1+p{
+            font-size: 13px;
+            line-height: 180%;
+           }
+           img[alt='jumbotron']{
+            max-width: 78%;
+            right: 10vw;
+            top: 76vh;
+        }
+        }
+        .home-jumbotron .bannerLinks{
+
+            > img {
+                height: 42.5px;
+                max-width: 170px !important;
+               
+            }
+        }
+        .genericJumbo{
+            margin-top: 50vh;
+            margin-left: -19vw;
+            padding-right: 4vw;
+        }
+        .last-jumbotron{
+            text-align: center;
+            border-radius: 50px;
+            margin-left: 5%;
+            width: 90vw;
+            img[alt='Phone in hand']{
+                display: none;
+            }
+            h1{
+                font-size: 47px;
+            }
+            p{
+                font-size: 19px;
+            }
+        }
+        .features-two{
+            li.timeline-item {
+               
+                strong{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 13px;
+                }
+            }
+            .thevideoSection{
+               
+                video{
+                    width: 85vw !important;
+                    height: 33vh;
+                }
+            }
+        }
+        section.features {
+            .infographic{
+                margin: 0% auto;
+                padding: 1em 1em;
+            }
+        }
+        .last-jumbotron{
+            padding-top: 10% !important;
+            .col{
+               div.row{
+                padding-left: 25%;
+                img{
+                    margin-bottom: 10%;
+                }
+               }
+            }
+        }
     }
 }
