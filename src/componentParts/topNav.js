@@ -6,7 +6,7 @@ function TopNav(params) {
   
     return (
         <nav className="navbar navbar-expand-lg" style={{backgroundImage: 'url(/grain.png)'}}>
-  <a className="navbar-brand ml-4 pl-3" href="/home">
+  <a className="navbar-brand ml-4 pl-3" href="/">
       <img src='/Logo-white.png' alt='wayachat logo' />
   </a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

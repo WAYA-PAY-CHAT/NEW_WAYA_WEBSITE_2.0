@@ -22,11 +22,8 @@ function App() {
     <div className="App">
         <Router>
       <Route exact path="/">
-        <Redirect to="/home" />
+      <Home/>
       </Route>
-      <Route path='/home'>
-     <Home/>
-      </Route> 
       <Route path='/about'>
         <About/>
       </Route>
