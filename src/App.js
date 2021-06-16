@@ -20,40 +20,42 @@ import HowItWorks from './pages/how-it-works';
 function App() {
   return (
     <div className="App">
-        <Router>
-      <Route exact path="/">
-      <Home/>
-      </Route>
-      <Route exact path='/about'>
-        <About/>
-      </Route>
-      <Route exact path='/agent'>
+               <Router>
+        <Switch>
+          <Route exact  path="/about">
+            <About />
+          </Route>
+          <Route exact  path="/blog">
+            <Blog />
+          </Route>
+          <Route exact  path='/agent'>
         <Agent/>
       </Route>
-      <Route exact path="/contact">
+      <Route exact  path="/contact">
         <ContactPage />
       </Route>
-      <Route exact path='/merchant'>
+      <Route exact  path='/merchant'>
       <MerchantPage/>
       </Route>
       <Route exact path='/wayapay'>
       <WayaPay/>
       </Route>
-      <Route exact path='/wayagram'>
+      <Route exact  path='/wayagram'>
       <WayaGram/>
       </Route>
-      <Route exact path='/blog'>
-      <Blog/>
-      </Route>
-      <Route exact path='/wayachat'>
+      <Route exact  path='/wayachat'>
       <WayaChat/>
       </Route> 
-      <Route exact path='/signin'>
+      <Route exact  path='/signin'>
       <SignIn/>
       </Route>
-      <Route exact path='/how-it-works'>
+      <Route exact  path='/how-it-works'>
       <HowItWorks/>
       </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
       </Router>
    </div>
   );
