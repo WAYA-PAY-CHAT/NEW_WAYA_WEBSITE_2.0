@@ -145,13 +145,28 @@ function Agent(){
                     <label for='email' className='col pl-2 mobileView'>Phone</label>
                     <input type='tel'  className='col-sm-5' placeholder='Phone Number' required />
                     </div>
-                    <label >Address  </label>
+                    <div className='row'>
+                    <label for='soo'  className='col-sm-7'>State  </label>
+                    <label for='lga' className='col pl-2 desktopView'>LGA  </label>
+                    </div>
                     <div className='inputGroup row justify-content-between ml-0'>
                        
                     
-                        <input type='text'  className='col-sm-5' placeholder='Address' required />
+                        <input type='text' id='soo' className='col-sm-5' placeholder='State' required />
                 
-                        <input type='tel'  className='col-sm-5' placeholder='Phone Number' required />
+                        <input type='text'  className='col-sm-5' placeholder='LGA' required />
+                        
+                    </div>
+                    <div className='row'>
+                    <label for='city'  className='col-sm-7'>City  </label>
+                    <label for='house' className='col pl-2 desktopView'>House Address  </label>
+                    </div>
+                    <div className='inputGroup row justify-content-between ml-0'>
+                       
+                    
+                        <input type='text' id='soo' className='col-sm-5' placeholder='City' required />
+                
+                        <input type='text'  className='col-sm-5' placeholder='Address (Including House Number)' required />
                         
                     </div>
                     <div className='text-center pt-4'>

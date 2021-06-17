@@ -88,3 +88,16 @@
     }
     }
   }
+
+  @media only screen and (max-width: 435px) {
+    #howitworkssection{
+      .videoSection{
+        padding-top: 6%;
+        padding-bottom: 5%;
+        video{
+            width: 83vw;
+            height: 35vh;
+        }
+    }
+    }
+  }
