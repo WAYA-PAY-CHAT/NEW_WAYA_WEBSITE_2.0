@@ -42,26 +42,33 @@ function HowItWorks(){
                 </video>
            </div>
            </Zoom>
-           <Fade right cascade>
+         
            <div className='faqs mb-4'>
+            <Fade left>
             <div className='mb-3'>
            <button class="accordion">Download Waya PayChat</button>
                 <div class="panel">
                 <p>You can download the Waya PayChat app for free from Google Play and App store. You need minimum Android version 5.0 and IOS version 10 to download the app.</p>
                 </div>
                 </div>
+                </Fade>
+                <Fade right>
                 <div className='mb-3'>
                 <button class="accordion">Register</button>
                 <div class="panel">
                 <p>Enter your phone number, name, and password. You will get a One Time Password (OTP) (SMS code) on your phone. Enter the OTP to verify your phone number. Note that Waya PayChat only works with a Nigerian phone number.</p>
                 </div>
 </div>
+</Fade>
+<Fade right>
 <div className='mb-3'>
                 <button class="accordion">Login</button>
                 <div class="panel">
                 <p>Enter your phone number and password to login to Waya PayChat.</p>
                 </div>
 </div>
+</Fade>
+<Fade left>
 <div className='mb-3'>
                 <button class="accordion">Add Bank Card</button>
                 <div class="panel">
@@ -75,6 +82,8 @@ function HowItWorks(){
                 </ul>
                 </div>
 </div>
+</Fade>
+<Fade right>
 <div className='mb-3'>
                 <button class="accordion">Fund Your Wallet</button>
                 <div class="panel">
@@ -90,6 +99,8 @@ function HowItWorks(){
                 </ul>
                 </div>
 </div>
+</Fade>
+<Fade left>
 <div className='mb-3'>
                 <button class="accordion">Request Money</button>
                 <div class="panel">
@@ -105,6 +116,8 @@ function HowItWorks(){
                 </ul>
                 </div>
 </div>
+</Fade>
+<Fade right>
 <div className='mb-3'>
                 <button class="accordion">Send Money</button>
                 <div class="panel">
@@ -121,6 +134,8 @@ function HowItWorks(){
                 <p>(The receiver of the money you sent, can receive the money if they have a Waya PayChat account or via a Waya PayChat Agent close to them. The receiver will get a message saying you have sent money to them, the amount and the code to use for withdrawing the money)</p>
                 </div>
                 </div>
+                </Fade>
+                <Fade left>
                 <div className='mb-3'>
                 <button class="accordion">Pay Merchant</button>
                 <div class="panel">
@@ -134,6 +149,8 @@ function HowItWorks(){
                 </ul>
                 </div>
 </div>
+</Fade>
+<Fade right>
 <div className='mb-3'>
                 <button class="accordion">Scan QR Code to Send Money or Make Payments</button>
                 <div class="panel">
@@ -148,6 +165,8 @@ function HowItWorks(){
                 </ul>
                 </div>
                 </div>
+                </Fade>
+                <Fade left>
               <div className='mb-3'>
                 <button class="accordion">Pay Bills</button>
                 <div class="panel">
@@ -162,6 +181,8 @@ function HowItWorks(){
                 </ul>
                 </div>
                 </div>
+                </Fade>
+                <Fade right>
                 <div className='mb-3'>
                 <button class="accordion">Send and Receive Money Via USSD</button>
                 <div class="panel">
@@ -187,6 +208,8 @@ function HowItWorks(){
                 </ul>
                 </div>
                 </div>
+                </Fade>
+                <Fade left>
                 <div className='mb-3'>
                 <button class="accordion">Withdraw Money</button>
                 <div class="panel">
@@ -203,18 +226,24 @@ function HowItWorks(){
                 <p>Note: You can only withdraw money if you have Linked and Validated your BVN on the Waya App</p>
                 </div>
                 </div>
+                </Fade>
+                <Fade right>
                 <div className='mb-3'>
                 <button class="accordion">Chat and Call</button>
                 <div class="panel">
                 <p>You can chat and call friends and family with Waya PayChat. Simply go to the Waya Chat page and enjoy our features for free.</p>
                 </div>
                 </div>
+                </Fade>
+                <Fade left>
                 <div className='mb-3'>
                 <button class="accordion">Socialize</button>
                 <div class="panel">
                 <p>Use Waya Gram to socialize, post and review comments, images, market your goods and services.</p>
                 </div>
                 </div>
+                </Fade>
+                <Fade right>
                 <div className='mb-3'>
                 <button class="accordion">
                 Add Phone Contacts and Invite Contacts
@@ -231,6 +260,8 @@ function HowItWorks(){
                 </ul>
                 </div>
                 </div>
+                </Fade>
+                <Fade left>
                 <div className='mb-3'>
                 <button class="accordion">Fees, Pricing and Limits</button>
                 <div class="panel">
@@ -255,6 +286,8 @@ function HowItWorks(){
                 <p>Funding your Waya PayChat wallet as a Private user or a Merchant has no limit.</p>
                 </div>
                 </div>
+                </Fade>
+                <Fade right>
                 <div className='mb-3'>
                 <button class="accordion">Safe and Secure Transactions</button>
                 <div class="panel">
@@ -263,8 +296,8 @@ Waya PayChat is as secure as e-banking. The money is not stored directly on the 
 We stores all personal data at a secure location and we do not disclose any personal data to third parties</p>
                 </div>
                 </div>
+                </Fade>
            </div>
-           </Fade>
            <PageFooter/>
        </div>
        </div>
