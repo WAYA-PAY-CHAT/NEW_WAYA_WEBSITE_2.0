@@ -23,13 +23,13 @@ function Agent(){
                         <img src='/operate.png' alt='banner'/>
                     </div>
                 </div>
-                <div className='row socials justify-content-start pl-4 ml-1'>
-                            <div  className='col-sm-3 col-md-3 col-lg-2'>
-                            <img alt='Google Play Download' src='/google-play-badge.png'/>
-                            </div>
-                            <div className='col-sm-3 col-md-3 col-lg-2'>
-                            <img alt='App Store Download' src='/app-store-badge.png'/>
-                            </div>
+                <div className=' socials justify-content-start pl-4'>
+                <a href='https://play.google.com/store/apps/details?id=com.wayapaychat' className='col col-md-4' target='_blank'>
+                            <img alt='Google Play Download' src='/google-play-badge.png' className=''/>
+                            </a>
+                            <a className='col col-md-4' href='https://apps.apple.com/us/app/id1480642853' target='_blank'>
+                            <img alt='App Store Download' src='/app-store-badge.png' />
+                            </a>
                 </div>
             </div>
             </Fade>
@@ -110,12 +110,12 @@ function Agent(){
                         <h2 className="">sign up now to join for free</h2>
                         </div>
                         <div className='row justify-content-left last-socials mt-4'>
-                            <div className='col-md-5 col-sm-3'>
-                            <img alt='Google Play Download' src='/google-play-badge.png' />
-                            </div>
-                            <div className='col-md-5 col-sm-3'>
+                        <a href='https://play.google.com/store/apps/details?id=com.wayapaychat' className='col col-md-4' target='_blank'>
+                            <img alt='Google Play Download' src='/google-play-badge.png' className=''/>
+                            </a>
+                            <a className='col col-md-4' href='https://apps.apple.com/us/app/id1480642853' target='_blank'>
                             <img alt='App Store Download' src='/app-store-badge.png' />
-                            </div>
+                            </a>
                            
                         </div>
                     </div>

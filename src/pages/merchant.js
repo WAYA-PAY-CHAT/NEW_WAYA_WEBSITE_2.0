@@ -15,9 +15,13 @@ function Merchant(){
                         <h1 className="">WAYA PAYCHAT WAS MADE TO HELP YOUR BUSINESS GROW</h1>
                         <p className=''>Join the group of smart business owners already enjoying faster, smoother and rewarding payment experience on Waya PayChat.</p>
                         <strong className='pb-3'>Download and sign up for free </strong>
-                        <div className='row mt-3'>
-                            <img alt='Google Play Download' src='/google-play-badge.png' className='col-md-3'/>
-                            <img alt='App Store Download' src='/app-store-badge.png' className='col-md-3'/>
+                        <div className=' mt-3'>
+                        <a href='https://play.google.com/store/apps/details?id=com.wayapaychat' className='col col-md-4' target='_blank'>
+                            <img alt='Google Play Download' src='/google-play-badge.png' className=''/>
+                            </a>
+                            <a className='col col-md-4' href='https://apps.apple.com/us/app/id1480642853' target='_blank'>
+                            <img alt='App Store Download' src='/app-store-badge.png' />
+                            </a>
                         </div>
                     </div>
                     <div className="col pt-4">
@@ -62,9 +66,13 @@ function Merchant(){
                     <div className='col-sm-12 col-lg-5'>
                     <h3 className="">Earn commissions every time your customer pay you using the app.</h3>
                         <p className=''>Download and sign up for free </p>
-                        <div className='row mt-3'>
-                            <img src='/google-play-badge.png' className='col-md-3' alt='Google Play Download'/>
-                            <img src='/app-store-badge.png' className='col-md-3' alt='App Store Download'/>
+                        <div className=' mt-3'>
+                        <a href='https://play.google.com/store/apps/details?id=com.wayapaychat' className='col col-md-4' target='_blank'>
+                            <img alt='Google Play Download' src='/google-play-badge.png' className=''/>
+                            </a>
+                            <a className='col col-md-4' href='https://apps.apple.com/us/app/id1480642853' target='_blank'>
+                            <img alt='App Store Download' src='/app-store-badge.png' />
+                            </a>
                         </div>
                     </div>
                     </Fade>

@@ -17,9 +17,14 @@ function Home(){
                         <h1 className="">TRANSACT, SOCIALIZE, CHAT AND CALL
 FOR FREE.</h1>
                         <p className=''>Waya Paychat digital wallet is an all-in-one platform to perform safe and secure transactions, pay your bills and socialize with friends and family, making calls, chats and sharing personal moments.</p>
-                        <div className='row mt-3 bannerLinks'>
-                            <img alt='Google Play Download' src='/google-play-badge.png' className='col-md-4'/>
-                            <img alt='App Store Download' src='/app-store-badge.png' className='col-md-4'/>
+                        <div className=' mt-3 bannerLinks'>
+                            <a href='https://play.google.com/store/apps/details?id=com.wayapaychat' className='col col-md-4' target='_blank'>
+                            <img alt='Google Play Download' src='/google-play-badge.png' className=''/>
+                            </a>
+                            <a className='col col-md-4' href='https://apps.apple.com/us/app/id1480642853' target='_blank'>
+                            <img alt='App Store Download' src='/app-store-badge.png' />
+                            </a>
+                           
                         </div>
                         <div className='goDown mt-4'>
                             <button className='pt-4'>
@@ -193,9 +198,13 @@ PHONE NUMBER OR QR CODE</h6>
                     <div className='col'>
                         <h1 className="">Download <br/> the app</h1>
                         <p className='py-2'>Download Waya PayChat and start enjoying our great features.</p>
-                        <div className='row mt-3'>
-                            <img alt='Google Play Download' src='/google-play-badge.png' className='col-md-4'/>
-                            <img alt='App Store Download' src='/app-store-badge.png' className='col-md-4'/>
+                        <div className='row mt-3 bannerLinks'>
+                        <a href='https://play.google.com/store/apps/details?id=com.wayapaychat' className='col col-md-4' target='_blank'>
+                            <img alt='Google Play Download' src='/google-play-badge.png' className=''/>
+                            </a>
+                            <a className='col col-md-4' href='https://apps.apple.com/us/app/id1480642853' target='_blank'>
+                            <img alt='App Store Download' src='/app-store-badge.png' />
+                            </a>
                         </div>
                     </div>
                 </div>

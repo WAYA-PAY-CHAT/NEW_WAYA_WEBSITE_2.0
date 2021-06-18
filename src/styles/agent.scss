@@ -204,6 +204,12 @@
                 margin-top: 20px;
                 max-width: 70%;
             }
+            .socials{
+                padding-left: 0 !important;
+                img{
+                    max-width: 16% !important;
+                }
+            }
         }
         .bottom-jumbotron{
             margin-left: 0;
@@ -250,6 +256,11 @@
                 font-size: 22px;
                 width: 50%;
             }
+            .last-socials{
+                img{
+                    max-width: 120%;
+                }
+            }
            }
         .last-form{
             height: auto;
@@ -274,14 +285,14 @@
                 display: none;
             }
             div.socials{
-                margin-left: 20px;
-                margin-top: 10px;
-                div{
-                    max-width: 130px;
-                }
-                img{
-                    max-width: 100%;
-                }
+                margin-left: 20vw;
+                margin-top: 7px;
+                // div{
+                //     max-width: 130px;
+                // }
+                // img{
+                //     max-width: 100%;
+                // }
             }
         }
         .last-form{
@@ -321,7 +332,10 @@
             }
             .lastphone{
                 position: absolute;
-                left: 65%;
+                right:-73vw;
+                img{
+                    max-width: 30%;
+                }
             }
         }
     }

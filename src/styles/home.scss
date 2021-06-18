@@ -268,7 +268,7 @@ section.features{
         }
         .home-jumbotron .bannerLinks{
 
-            > img {
+            > a {
                 height: 42.5px;
                 max-width: 170px !important;
                
@@ -335,9 +335,9 @@ section.features{
         }
         .home-jumbotron .bannerLinks{
 
-            > img {
+            > a {
                 height: 42.5px;
-                max-width: 170px !important;
+                max-width: 100px !important;
                
             }
         }
@@ -389,7 +389,9 @@ section.features{
             padding-top: 10% !important;
             .col{
                div.row{
-                padding-left: 25%;
+                   text-align: center;
+                padding-left: 10%;
+                padding-right: 20%;
                 img{
                     margin-bottom: 10%;
                 }
