@@ -3,62 +3,38 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import PageFooter from '../componentParts/footer'
 import TopNav from '../componentParts/topNav'
+import {  useRouteMatch  } from "react-router-dom";
 
 function Blog(){
-    const [posts, setposts] = useState([
-        {
-            title:'Strategies for Business Survival during a Recession ',
-            image: '/blogPic.png',
-            preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna diam vestibulum in aliquam faucibus ornare. Amet feugiat mauris consequat, risus, arcu.',
-            link: '',
-            date: 'Sunday, 20 May, 2020',
-            duration: '12 Min read'
-        },
-        {
-            title:'18 Strategic ways to win customers and make them persistent for life',
-            image: '/blogPic.png',
-            preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna diam vestibulum in aliquam faucibus ornare. Amet feugiat mauris consequat, risus, arcu.',
-            link: '',
-            date: 'Sunday, 20 May, 2020',
-            duration: '12 Min read'
-        },
-        {
-            title:'The Benefits of Digital Payments',
-            image: '/blogPic.png',
-            preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna diam vestibulum in aliquam faucibus ornare. Amet feugiat mauris consequat, risus, arcu.',
-            link: '',
-            date: 'Sunday, 20 May, 2020',
-            duration: '12 Min read'
-        },
-        {
-            title:'Why the Digital Mobile Wallet is the Future and Better Than Cash?',
-            image: '/blogPic.png',
-            preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna diam vestibulum in aliquam faucibus ornare. Amet feugiat mauris consequat, risus, arcu.',
-            link: '',
-            date: 'Sunday, 20 May, 2020',
-            duration: '12 Min read'
-        },
-        {
-            title:'Six (6) Ways To Manage Your Expenses This Yuletide Season',
-            image: '/blogPic.png',
-            preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna diam vestibulum in aliquam faucibus ornare. Amet feugiat mauris consequat, risus, arcu.',
-            link: '',
-            date: 'Sunday, 20 May, 2020',
-            duration: '12 Min read'
-        },
-        {
-            title:'Are you behind your sales push? This is for you to grow',
-            image: '/blogPic.png',
-            preview: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna diam vestibulum in aliquam faucibus ornare. Amet feugiat mauris consequat, risus, arcu.',
-            link: '',
-            date: 'Sunday, 20 May, 2020',
-            duration: '12 Min read'
-        },
-    ])
+    let { path, url } = useRouteMatch();
+    const [posts, setposts] = useState([])
+    
+
+    let dateFormater = (theDate) => {
+        const dateobj = new Date(theDate);
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return dateobj.toLocaleDateString(undefined, options)
+    }
+
+    let truncateText = (contents) => {
+       let reduced = contents.slice(0, 150)
+       return reduced
+    }
+
+    let spliceIntoChunks = (elements, chunkSize) => {
+        const res = [];
+        while (elements.length > 0) {
+            const chunk = elements.splice(0, chunkSize);
+            res.push(chunk);
+        }
+        return res;
+    }
 
     useEffect(() => {
         axios.get('https://waya-pay-chat.herokuapp.com/posts/').then(res => {
-            console.log(res)
+            setposts(res.data)
+           // let splits = spliceIntoChunks(res.data, 5)
+           // console.log(splits)
         }).catch(err => {
             console.error(err)
         })
@@ -83,20 +59,20 @@ function Blog(){
             {
                 posts.map(el => {
                     return  <div className="card blog-card" >
-                    <img className="card-img-top" src={el.image} alt="Blog Image"/>
+                    <img className="card-img-top" src={el.image || '/blogPic.png'} alt="Blog Image"/>
                         <div className="card-body">
                             <div className='row justify-content-between'>
-                                <p className='col'>{el.date}</p>
-                                <p className='col-sm-4'>{el.duration}</p>
+                                <p className='col'>{dateFormater(el.updated_at)}</p>
+                                <p className='col-sm-4'>{el.duration || '10 mins read'}</p>
                             </div>
                             <h6 className="card-title">{el.title}</h6>
-                            <p className="card-text">{el.preview}</p>
-                            <button className='orange'>Read More <span><img src='/rightArr.png' /></span></button>
+                            <p className="card-text">{truncateText(el.content)}</p>
+                            <button className='orange'><a href={`${url}/${el.id}`}>Read More</a><span><img src='/rightArr.png' /></span></button>
                     </div>
                 </div>
                 })
             }
-            </div>
+            </div>  
             <div aria-label="Page  navigation example">
                 <ul className="justify-content-center pagination">
                     <li className="page-item"><a className="page-link" href="#">  <img src='/left.png'/></a></li>

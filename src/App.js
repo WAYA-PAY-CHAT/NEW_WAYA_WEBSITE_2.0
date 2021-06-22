@@ -16,6 +16,7 @@ import './styles/App.scss';
 import WayaChat from './pages/wayachat';
 import Agent from './pages/agent';
 import HowItWorks from './pages/how-it-works';
+import SinglePost from './pages/single-post';
 
 function App() {
   return (
@@ -52,6 +53,9 @@ function App() {
       <Route exact  path='/how-it-works'>
       <HowItWorks/>
       </Route>
+      <Route path={`/blog/:topicId`}>
+          <SinglePost />
+        </Route>
           <Route exact path="/">
             <Home />
           </Route>

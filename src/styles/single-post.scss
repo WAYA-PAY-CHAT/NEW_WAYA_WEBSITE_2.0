@@ -1,0 +1,37 @@
+#singlePost{
+    background-color: #EEEEEE;
+    .theBody{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    p{
+        color: #FF4400 !important;
+    }
+    .jumbotron{
+        margin-bottom: 0;
+    }
+    h3{
+        text-transform: uppercase;
+    }
+    section{
+       text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #singlePost{
+        .theBody{
+            margin-left: 5%;
+            margin-right: 5%;
+            .jumbotron img{
+                max-width: 90%;
+            }
+            p{
+                text-align: 14px;
+            }
+            section{
+                font-size: smaller;
+            }
+        }
+    }
+}
