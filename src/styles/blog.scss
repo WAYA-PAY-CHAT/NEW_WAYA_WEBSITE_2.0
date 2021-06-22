@@ -51,18 +51,17 @@
     }
 }
 
-.pagination{
-    button{
-        outline: none;
-        border: none;
-        background: none;
-    }
-    button:first-of-type{
-        margin-right:35px;
-    }
-    span{
-        padding-right: 20px
-    }
+.page-link {
+    line-height: normal; 
+    background-color: transparent; 
+    border: none;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: transparent;
+    border:none;
 }
 
 @media only screen and (max-width: 425px) {

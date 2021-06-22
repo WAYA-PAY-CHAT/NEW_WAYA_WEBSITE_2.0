@@ -75,6 +75,12 @@ div.wayapayJumbotron{
   display: block;
 }
 
+@media only screen and (max-width: 768px){
+  .theGrids{
+    grid-template-columns: repeat(2, 40vw);
+  }
+}
+
 @media only screen and (max-width: 425px){
   .theGrids{
     grid-template-columns: 300px;

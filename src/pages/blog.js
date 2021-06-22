@@ -1,5 +1,6 @@
 import '../styles/blog.scss'
-import {useState} from 'react'
+import axios from 'axios'
+import {useState, useEffect} from 'react'
 import PageFooter from '../componentParts/footer'
 import TopNav from '../componentParts/topNav'
 
@@ -54,6 +55,18 @@ function Blog(){
             duration: '12 Min read'
         },
     ])
+
+    useEffect(() => {
+        axios.get('https://waya-pay-chat.herokuapp.com/posts/').then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.error(err)
+        })
+        // return () => {
+        //     cleanup
+        // }
+    }, [])
+
     return (     
         <div>
             <TopNav/>
@@ -84,20 +97,14 @@ function Blog(){
                 })
             }
             </div>
-            <div className='pagination row justify-content-center'>
-                <div className='row justify-content-center align-center col-sm-3'>
-                <button className='col-sm-2'>
-                    <img src='/left.png'/>
-                </button>
-                <div className='col-sm-6'>
-                <span className=''><img src='/dot.png'/></span>
-                <span className=''><img src='/darkDot.png'/></span>
-                <span className=''><img src='/darkDot.png'/></span>
-                </div>
-                <button className='col-sm-2'>
-                    <img src='/right.png'/>
-                </button>
-                </div>
+            <div aria-label="Page  navigation example">
+                <ul className="justify-content-center pagination">
+                    <li className="page-item"><a className="page-link" href="#">  <img src='/left.png'/></a></li>
+                    <li className="page-item active"><a className="page-link" href="#"><img src='/dot.png'/></a></li>
+                    <li className="page-item"><a className="page-link" href="#"><img src='/darkDot.png'/></a></li>
+                    <li className="page-item"><a className="page-link" href="#"><img src='/darkDot.png'/></a></li>
+                    <li className="page-item"><a className="page-link" href="#">  <img src='/right.png'/></a></li>
+                </ul>
             </div>
             <PageFooter/>
        </div>
