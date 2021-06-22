@@ -3,9 +3,10 @@ import axios from 'axios'
 import {useState, useEffect} from 'react'
 import PageFooter from '../componentParts/footer'
 import TopNav from '../componentParts/topNav'
-import { useParams } from "react-router-dom";
+import { useParams, useRouteMatch } from "react-router-dom";
 
 function SinglePost(props){
+    let { path, url } = useRouteMatch();
     let { postId } = useParams();
     const [post, setPost] = useState({})
     let dateFormater = (theDate) => {
@@ -21,9 +22,11 @@ function SinglePost(props){
     }
 
     useEffect(() => {
-        axios.get(`https://waya-pay-chat.herokuapp.com/posts/1`).then(res => {
+        let splited = url.split('/')
+        axios.get(`https://waya-pay-chat.herokuapp.com/posts/${splited[2]}`).then(res => {
             console.log(res)
             setPost(res.data)
+            console.log(post.image.formats.medium.url)
         }).catch(err => {
             console.error(err)
         })
@@ -38,7 +41,7 @@ function SinglePost(props){
                 <div id='singlePost'>
                     <div className='theBody'>
                     <div className='jumbotron'>
-                    <img className="" src={'/blogPic.png'} alt="Blog Image"/>
+                    <img className="" src={'/blogPic.png'}/>
                     <p>{dateFormater(post.updated_at)}</p>
                     <p>{post.author || 'Author'}</p>
                     <h3>{post.title}</h3>
