@@ -15,6 +15,10 @@ function SinglePost(props){
         return dateobj.toLocaleDateString(undefined, options)
     }
 
+    let formatUrl = (url) => {
+        return `https://www.waya-pay-chat.herokuapp.com${url}`
+    }
+
     let formatPostTitle = (text) => {
         let pieces = text.split(' ')
         let joined = pieces.join('%20')
@@ -24,9 +28,7 @@ function SinglePost(props){
     useEffect(() => {
         let splited = url.split('/')
         axios.get(`https://waya-pay-chat.herokuapp.com/posts/${splited[2]}`).then(res => {
-            console.log(res)
             setPost(res.data)
-            console.log(post.image.formats.medium.url)
         }).catch(err => {
             console.error(err)
         })
@@ -41,7 +43,7 @@ function SinglePost(props){
                 <div id='singlePost'>
                     <div className='theBody'>
                     <div className='jumbotron'>
-                    <img className="" src={'/blogPic.png'}/>
+                    <img className="" src={`${post.image?formatUrl(post.image.url):'/blogPic.png'}`}/>
                     <p>{dateFormater(post.updated_at)}</p>
                     <p>{post.author || 'Author'}</p>
                     <h3>{post.title}</h3>
