@@ -57,14 +57,14 @@ section.categories{
     img{
         max-width: 110px;
     }
-    button.floatChat{
-        border: none;
-        outline: none;
-        background: none;
-        position: absolute;
-        right: 5%;
-        bottom: 4%;
-    }
+    // button.floatChat{
+    //     border: none;
+    //     outline: none;
+    //     background: none;
+    //     position: absolute;
+    //     right: 5%;
+    //     bottom: 4%;
+    // }
 }
 
 section.features{
@@ -109,7 +109,7 @@ section.features{
             margin-top: 53px;
             // margin-bottom: 70px !important;
             width: 2px;
-            height: 86%;
+            height: 88%;
             z-index: 400;
             border-radius: 1rem;
         }

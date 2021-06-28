@@ -70,9 +70,6 @@ PHONE NUMBER OR QR CODE</h6>
                     </div>
                     </Fade>
                 </div>
-                <button className='floatChat'>
-                <img src='/chatting.png' alt='Chat' />
-                </button>
             </section>
             <section className='features text-center' style={{backgroundImage: 'url(/grain.png)'}}>
                 <h4>Waya PayChat Unique Features</h4>
@@ -97,7 +94,7 @@ PHONE NUMBER OR QR CODE</h6>
                         </div>
                         <div className='special-row'>
                         <div className=''>
-                        <img src='/safensecure.png' />
+                        <img src='/phoneIcon.png' />
                         </div>
                         <div className=''>
                             <h6>Safe and Secure</h6>
@@ -108,7 +105,7 @@ PHONE NUMBER OR QR CODE</h6>
                         </div>
                         <div className='special-row'>
                         <div className=''>
-                        <img src='/safensecure.png' />
+                        <img src='/qrcode.png' />
                         </div>
                         <div className=''>
                             <h6>Safe and Secure</h6>
@@ -119,7 +116,7 @@ PHONE NUMBER OR QR CODE</h6>
                         </div>
                         <div className='special-row'>
                         <div className=''>
-                        <img src='/safensecure.png' />
+                        <img src='/oneth.png' style={{width: '100%'}}/>
                         </div>
                         <div className=''>
                             <h6>Safe and Secure</h6>
@@ -130,7 +127,7 @@ PHONE NUMBER OR QR CODE</h6>
                         </div>
                         <div className='special-row'>
                         <div className=''>
-                        <img src='/safensecure.png' />
+                        <img src='/briefcase.png' />
                         </div>
                         <div className=''>
                             <h6>Safe and Secure</h6>
@@ -141,7 +138,7 @@ PHONE NUMBER OR QR CODE</h6>
                         </div>
                         <div className='special-row'>
                         <div className=''>
-                        <img src='/safensecure.png' />
+                        <img src='/speaker.png' />
                         </div>
                         <div className=''>
                             <h6>Safe and Secure</h6>

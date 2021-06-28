@@ -91,7 +91,6 @@ Meet new people, Post pictures and videos, create groups, advertise your product
                 </div>
             </div>
             </Fade>
-            <img src='/chatting.png' alt='chat icon'/>
            <PageFooter/>
        </div>
         </div>

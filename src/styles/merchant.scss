@@ -27,7 +27,7 @@
     }
 }
 
-.main-jumbotron img:last-of-type {
+.main-jumbotron img[alt='jumbotron'] {
     max-width: 85%; 
 }
 
@@ -108,6 +108,11 @@
                    
                 }
             }
+            .except{
+                h3{
+                    padding-top: 5vh !important;
+                }
+            }
             div.row.except{
                 margin-top: 10%;
                 h3{
@@ -129,6 +134,29 @@
                     //max-width: 40% !important;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .main-jumbotron{
+         img[alt~='Download'] {
+            max-width: 130px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) and (height: 812px){
+    #merchantPage {
+        .main-jumbotron{
+           strong{
+               position: absolute;
+               top: 59vh;
+           }
+           strong+div{
+                position: absolute;
+                top: 62vh;
+           }
         }
     }
 }
