@@ -1,7 +1,7 @@
 import '../styles/signin.scss'
 import {useState} from 'react'
 import Rotate from 'react-reveal/Rotate';
-import PageFooter from '../componentParts/footer'
+// import PageFooter from '../componentParts/footer'
 import TopNav from '../componentParts/topNav'
 
 function SignIn(){
@@ -144,7 +144,6 @@ function SignIn(){
             </div>  
             </Rotate>
             </div>
-            <PageFooter/>
        </div>
        </div>
     )

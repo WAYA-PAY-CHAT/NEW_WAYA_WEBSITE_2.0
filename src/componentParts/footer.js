@@ -56,12 +56,12 @@ Copyright &copy; Waya 2020  All rights reserved</p>
                         </a>
                         </li>
                         <li>
-                        <a className="nav-link" href="/">
+                        <a className="nav-link" href="/terms-of-use">
                             Terms of use
                         </a>
                         </li>
                         <li>
-                        <a className="nav-link" href="/">
+                        <a className="nav-link" href="/privacy-page">
                             Privacy Policy
                             </a>
                             </li>

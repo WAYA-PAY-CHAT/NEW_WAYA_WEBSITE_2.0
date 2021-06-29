@@ -17,6 +17,8 @@ import WayaChat from './pages/wayachat';
 import Agent from './pages/agent';
 import HowItWorks from './pages/how-it-works';
 import SinglePost from './pages/single-post';
+import TermsOfUse from './pages/terms';
+import PrivacyPage from './pages/privacy';
 
 function App() {
   return (
@@ -52,6 +54,12 @@ function App() {
       </Route>
       <Route exact  path='/how-it-works'>
       <HowItWorks/>
+      </Route>
+      <Route exact path='/terms-of-use'>
+        <TermsOfUse/>
+      </Route>
+      <Route exact path='/privacy-page'>
+        <PrivacyPage/>
       </Route>
       <Route path={`/blog/:topicId`}>
           <SinglePost />

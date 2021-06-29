@@ -2,7 +2,7 @@ import PageFooter from '../componentParts/footer'
 import GenericJumbotron from '../componentParts/genericJumbotron'
 import TopNav from '../componentParts/topNav'
 import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
+// import Zoom from 'react-reveal/Zoom';
 import '../styles/about.scss'
 
 function About(){
@@ -11,8 +11,8 @@ function About(){
             <TopNav />
             <div id='aboutsection' >
             <GenericJumbotron titleText='ABOUT US'/>
-            <Fade bottom cascade>
             <div id='aboutGrid' className='pb-4 mb-4 px-4 mx-2'>
+            <Fade bottom>
             <div>
                     <img src='/about1.png'/>
                     <div className='text-center'>
@@ -23,6 +23,8 @@ Register, Login and Transact with your Phone number</p>
                         </div>
                     </div>
                 </div>
+            </Fade>
+            <Fade bottom>
                 <div>
                     <img src='/about2.png'/>
                     <div className='text-center'>
@@ -34,6 +36,8 @@ Add Bank card / setup Bank account and start transacting</p>
                         </div>
                     </div>
                 </div>
+                </Fade>
+                <Fade bottom>
                 <div>
                     <img src='/about3.png'/>
                     <div className='text-center'>
@@ -45,6 +49,8 @@ Link Your BVN, Top up your Wallet, Request for Payment, Accept payment, Transfer
                         </div>
                     </div>
                 </div>
+                </Fade>
+                <Fade bottom>
                 <div>
                     <img src='/about4.png'/>
                     <div className='text-center'>
@@ -56,6 +62,8 @@ Transact, and Receive payments with or without Internet access with our multiple
                         </div>
                     </div>
                 </div> 
+                </Fade>
+                <Fade bottom>
                 <div>
                     <img src='/about5.png'/>
                     <div className='text-center'>
@@ -67,6 +75,8 @@ Scan and make payments, Send QR code to customers/contact list and get paid in m
                         </div>
                     </div>
                 </div>
+                </Fade>
+                <Fade bottom>
                 <div>
                     <img src='/about6.png'/>
                     <div className='text-center'>
@@ -78,6 +88,8 @@ Get in touch with your loved ones, send them pictures and videos, make free vide
                         </div>
                     </div>
                 </div>
+                </Fade>
+                <Fade bottom>
                 <div>
                     <img src='/about7.png'/>
                     <div className='text-center'>
@@ -89,8 +101,8 @@ Meet new people, Post pictures and videos, create groups, advertise your product
                         </div>
                     </div>
                 </div>
+                </Fade>
             </div>
-            </Fade>
            <PageFooter/>
        </div>
         </div>

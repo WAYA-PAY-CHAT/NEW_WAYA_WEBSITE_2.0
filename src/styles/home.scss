@@ -2,6 +2,7 @@
     padding-left: 6%;
     background-color: #FF4400;
     background-blend-mode: darken;
+    background-repeat: no-repeat;
     overflow-y: visible;
     .goDown{
         text-align: center;
@@ -70,6 +71,7 @@ section.categories{
 section.features{
     background-color: #FF4400;
     background-blend-mode: darken;
+    background-repeat: no-repeat;
     height: auto;
     padding-top: 4%;
     h4{
@@ -223,6 +225,7 @@ section.features{
 .last-jumbotron {
     background-color: #FF4400;
     background-blend-mode: darken;
+    background-repeat: no-repeat;
     border-radius: 100px;
     padding: 5% 6% 0% 6% !important;
     img:first-of-type{

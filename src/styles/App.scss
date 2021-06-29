@@ -78,6 +78,27 @@ div.wayapayJumbotron{
   display: block;
 }
 
+.tou-jumbotron{
+  background-repeat: no-repeat;
+  background-position:right;
+  height: 80% !important;
+  h2{
+      font-family:'Open Sans', sans-serif;
+      font-weight: 500;
+      font-size: 57px;
+      line-height: 116.6%;
+      color: #FF4400;
+  }
+}
+
+.documentPages{
+  article{
+      margin-left: 10vw;
+      margin-right: 10vw;
+      margin-bottom: 5vh;
+  }
+}
+
 @media only screen and (max-width: 768px){
   .theGrids{
     grid-template-columns: repeat(2, 40vw);
