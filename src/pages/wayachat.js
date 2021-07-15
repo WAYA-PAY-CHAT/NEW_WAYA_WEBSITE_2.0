@@ -12,29 +12,34 @@ function WayaChat(){
     const [shortText, setshortText] = useState('Data Charges may apply. Contact your provider for details')
     const [gridData, setgridData] = useState([
         {
-            title: 'make post',
-            image: '/post.png',
-            text: 'Make short posts and share across moments with friends and families'
+            title: 'Voice call',
+            image: '/chaticon.png',
+            text: 'Make secured VOIP calls with friends or business associates using SPONSORED INTERENET DATA on WayaChat, it’s all FREE'
         },
         {
-            title: 'join group',
-            image: '/Group.png',
-            text: 'Join group, follow events, like and follow personal and business pages'
+            title: 'video call',
+            image: '/video-call.png',
+            text: 'Use WayaChat’s video call features to make end-to-end video calls with any of your contacts using SPONSORED INTERNET DATA'
         },
         {
-            title: 'Socialize',
-            image: '/socializeIcon.png',
-            text: 'Socialise with the power of a growing community on WayaGram, express yourself within the limits of boundless freedom'
+            title: 'send media',
+            image: '/sharer.png',
+            text: 'Send multimedia files; Video, GIF, Images, Voice Notes to your contacts at super speed to enhance your communication on WayaChat'
         },
         {
-            title: 'Vote',
-            image: '/vote.png',
-            text: 'Participate in poll on WayaGram, vote for friends and families with WayaGram'
+            title: 'chat',
+            image: '/chats.png',
+            text: 'WayaChat is an instant messaging tool that allows you to chat with friends and family. Send secure short messages to personal contacts or within groups. Messaging is fun with WayaChat'
         },
         {
-            title: 'enjoy moments',
-            image: '/smileys.png',
-            text: 'Watch short clips of your followers or any other WayaGram user. enjoy momemts, like and share with others in your timeline'
+            title: 'share files',
+            image: '/sharing.png',
+            text: 'WayaChat allows you to share documents like PDF, Docx, links, JPGE, PNG, SVG, MP4... share files on the go with WayaChat'
+        },
+        {
+            title: 'GROUP VOICE CALL AND VIDEO',
+            image: '/groupcall.png',
+            text: 'Initiate or join group voice calls and video with friends and family or business associates and make group voice calls or video with WayaChat. All calls on WayaChat are end-to-end encrypted with the most robust encryption technology'
         }
     ])
     return (     
