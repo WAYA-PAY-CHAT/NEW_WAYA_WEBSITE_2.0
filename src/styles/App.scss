@@ -1,7 +1,9 @@
 .App{
   overflow-x: hidden;
 }
-
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
 button.orange{
   width: 170px;
   padding-inline-start: 5px;
