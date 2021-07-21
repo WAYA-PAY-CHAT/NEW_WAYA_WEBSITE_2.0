@@ -4,6 +4,15 @@
 .dropdown:hover>.dropdown-menu {
   display: block;
 }
+
+.dropdown-menu{
+  margin-top: -5px;
+}
+
+.inner-menu{
+  margin-left: 6em;
+}
+
 button.orange{
   width: 170px;
   padding-inline-start: 5px;
