@@ -13,32 +13,38 @@ function WayaChat(){
     const [gridData, setgridData] = useState([
         {
             title: 'Voice call',
+            id: 'voiceCall',
             image: '/chaticon.png',
             text: 'Make secured VOIP calls with friends or business associates using SPONSORED INTERENET DATA on WayaChat, it’s all FREE'
         },
         {
             title: 'video call',
+            id: 'videoCall',
             image: '/video-call.png',
             text: 'Use WayaChat’s video call features to make end-to-end video calls with any of your contacts using SPONSORED INTERNET DATA'
         },
         {
             title: 'send media',
+            id:'media',
             image: '/sharer.png',
             text: 'Send multimedia files; Video, GIF, Images, Voice Notes to your contacts at super speed to enhance your communication on WayaChat'
         },
         {
             title: 'chat',
+            id:'chats',
             image: '/chats.png',
             text: 'WayaChat is an instant messaging tool that allows you to chat with friends and family. Send secure short messages to personal contacts or within groups. Messaging is fun with WayaChat'
         },
         {
             title: 'share files',
             image: '/sharing.png',
+            id:'sharing',
             text: 'WayaChat allows you to share documents like PDF, Docx, links, JPGE, PNG, SVG, MP4... share files on the go with WayaChat'
         },
         {
             title: 'GROUP VOICE CALL AND VIDEO',
             image: '/groupcall.png',
+            id:'groupcall',
             text: 'Initiate or join group voice calls and video with friends and family or business associates and make group voice calls or video with WayaChat. All calls on WayaChat are end-to-end encrypted with the most robust encryption technology'
         }
     ])
@@ -65,6 +71,7 @@ function WayaChat(){
                 return <SingleBox bgColor={'white'}
                 title={el.title}
                 body={el.text}
+                givenId={el.id}
                  imageName={el.image}/>
            })}           
            </div>
