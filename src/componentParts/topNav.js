@@ -32,9 +32,51 @@ function TopNav(params) {
          Products
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a className="dropdown-item" href="/wayapay">WayaPay</a>
-          <a className="dropdown-item" href="/wayagram">WayaGram</a>
-          <a className="dropdown-item" href="/wayachat">WayaChat</a>
+        <li className="nav-item dropdown">
+        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        WayaPay
+        </a>
+        <div className="dropdown-menu inner-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a className="dropdown-item" href="/wayapay#wallet">Digital Wallet</a>
+          <a className="dropdown-item" href="/wayapay#sendMoney">Send Money</a>
+          <a className="dropdown-item" href="/wayapay#withdraw">Withdraw Money</a>
+          <a className="dropdown-item" href="/wayapay#qr">Qr code scanner</a>
+          <a className="dropdown-item" href="/wayapay#bills">Pay Bills</a>
+          <a className="dropdown-item" href="/wayapay#checkout">Online Checkout</a>
+          <a className="dropdown-item" href="/wayapay#rmoney">Request Money</a>
+          <a className="dropdown-item" href="/wayapay#invoice">Settle Invoice</a>
+          <a className="dropdown-item" href="/wayapay#tvSub">Pay TV Subscription</a>
+          <a className="dropdown-item" href="/wayapay#topUp">Top-up Airtime and Data</a>
+        </div>
+      </li>
+      <li className="nav-item dropdown">
+        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        WayaChat
+        </a>
+        <div className="dropdown-menu inner-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a className="dropdown-item" href="/wayachat#voiceCall">Voice call</a>
+          <a className="dropdown-item" href="/wayachat#videoCall">Video call</a>
+          <a className="dropdown-item" href="/wayachat#media">Send media</a>
+          <a className="dropdown-item" href="/wayachat#chats">Chat</a>
+          <a className="dropdown-item" href="/wayachat#sharing">Share files</a>
+          <a className="dropdown-item" href="/wayachat#groupcall">Group Voice Call and Video</a>
+        </div>
+      </li>
+      <li className="nav-item dropdown">
+        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        WayaGram
+        </a>
+        <div className="dropdown-menu inner-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a className="dropdown-item" href="/wayagram#post">Make Post</a>
+          <a className="dropdown-item" href="/wayagram#group">Join Group</a>
+          <a className="dropdown-item" href="/wayagram#socialize">Socialize</a>
+          <a className="dropdown-item" href="/wayagram#vote">Vote</a>
+          <a className="dropdown-item" href="/wayagram#moments">Enjoy Moments</a>
+          <a className="dropdown-item" href="/wayagram#advertise">Advertise</a>
+          <a className="dropdown-item" href="/wayagram#live">Share Live Screen</a>
+          <a className="dropdown-item" href="/wayagram#campaign">Campaign</a>
+        </div>
+      </li>
         </div>
       </li>
       <li className="nav-item">
