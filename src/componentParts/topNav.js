@@ -32,7 +32,7 @@ function TopNav(params) {
          Products
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a className="dropdown-item" href="/wayapay">Waay</a>
+          <a className="dropdown-item" href="/wayapay">WayaPay</a>
           <a className="dropdown-item" href="/wayagram">WayaGram</a>
           <a className="dropdown-item" href="/wayachat">WayaChat</a>
         </div>
