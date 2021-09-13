@@ -108,14 +108,14 @@ export default () => {
               <h1 className="fw-bolder text-secondary">Volt React Dashboard</h1>
               <p className="text-muted fw-light mb-5 h5">Open source powered by React.js and Bootstrap 5</p>
               <div className="d-flex align-items-center justify-content-center">
-                <Button variant="secondary" as={Link} to={Routes.DashboardOverview.path} className="text-dark me-3">
+                <Button variant="secondary" as={Link} to={Routes.DashboardOverview} className="text-dark me-3">
                   Explore dashboard <FontAwesomeIcon icon={faExternalLinkAlt} className="d-none d-sm-inline ms-1" />
                 </Button>
                 <GitHubButton className="mt-lg-2" href="https://github.com/themesberg/volt-react-dashboard" data-size="large" data-show-count="true" aria-label="Star themesberg/volt-react-dashboard on GitHub">Star</GitHubButton>
               </div>
               <div className="d-flex justify-content-center flex-column mb-6 mb-lg-5 mt-5">
                 <div className="text-center">
-                  <a href="https://themesberg.com" target="_blank">
+                  <a href="https://themesberg.com" target="_blank" rel="noopener noreferrer">
                     <Image src={ThemesbergLogoIcon} height={25} width={25} className="mb-3" alt="Themesberg Logo" />
                     <p className="text-muted font-small m-0">A Themesberg production</p>
                   </a>

@@ -15,8 +15,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter } from "react-router-dom";
-
+import { Router } from "react-router-dom";
+import { createBrowserHistory } from 'history'
+import 'antd/dist/antd.css';
 // core styles
 import "./scss/volt.scss";
 
@@ -26,11 +27,16 @@ import "react-datetime/css/react-datetime.css";
 
 import HomePage from "./pages/HomePage";
 import ScrollToTop from "./components/ScrollToTop";
+import { RecoilRoot } from 'recoil';
+
+export const history = createBrowserHistory()
 
 ReactDOM.render(
-  <HashRouter>
-    <ScrollToTop />
-    <HomePage />
-  </HashRouter>,
+  <RecoilRoot>
+    <Router history={history}>
+      <ScrollToTop />
+      <HomePage />
+    </Router>
+  </RecoilRoot>,
   document.getElementById("root")
 );

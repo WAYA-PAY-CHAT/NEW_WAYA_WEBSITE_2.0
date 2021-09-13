@@ -18,19 +18,19 @@ export default [
         "id": 1,
         "name": "Overview",
         "image": OverviewImg,
-        "link": Routes.DashboardOverview.path
+        "link": Routes.DashboardOverview
     },
     {
         "id": 2,
         "name": "Transactions",
         "image": TransactionsImg,
-        "link": Routes.Transactions.path
+        "link": Routes.Transactions
     },
     {
         "id": 3,
         "name": "Settings",
         "image": SettingsImg,
-        "link": Routes.Settings.path
+        "link": Routes.Settings
     },
     {
         "id": 4,
@@ -42,36 +42,36 @@ export default [
         "id": 5,
         "name": "Sign Up",
         "image": SignUpImg,
-        "link": Routes.Signup.path
+        "link": Routes.Signup
     },
     {
         "id": 6,
         "name": "Lock",
         "image": LockImg,
-        "link": Routes.Lock.path
+        "link": Routes.Lock
     },
     {
         "id": 7,
         "name": "Forgot password",
         "image": ForgotPasswordImg,
-        "link": Routes.ForgotPassword.path
+        "link": Routes.ForgotPassword
     },
     {
         "id": 8,
         "name": "Reset password",
         "image": ResetPasswordImg,
-        "link": Routes.ResetPassword.path
+        "link": Routes.ResetPassword
     },
     {
         "id": 9,
         "name": "404",
         "image": NotFoundImg,
-        "link": Routes.NotFound.path
+        "link": Routes.NotFound
     },
     {
         "id": 10,
         "name": "500",
         "image": ServerErrorImg,
-        "link": Routes.ServerError.path
+        "link": Routes.ServerError
     }
 ];
