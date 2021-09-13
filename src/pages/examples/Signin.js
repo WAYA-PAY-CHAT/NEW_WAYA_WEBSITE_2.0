@@ -37,7 +37,7 @@ export default () => {
     const res = await login(data)
     if (res.status) {
       localStorage.setItem("user_data", JSON.stringify(res.token))
-      history.push(Routes.DashboardOverview)
+      history.push(Routes.Admin)
       setResponse({ message: res.message, title: "success" })
       setShowAlert(true)
     } else {
