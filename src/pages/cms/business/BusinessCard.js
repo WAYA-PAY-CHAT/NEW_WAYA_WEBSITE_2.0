@@ -10,7 +10,7 @@ import { updateBusiness } from '../../../services/apiCalls';
 import { imageUrl } from '../../../services/axios'
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
-const BusinessCard = ({ img, description, title, type, url }) => {
+const BusinessCard = ({ img, description, title, type, url, page }) => {
   const [loading, setLoading] = useState(false)
   const [file, setFile] = useState("")
   const [createModal, setCreateModal] = useState(false)
@@ -92,12 +92,14 @@ const BusinessCard = ({ img, description, title, type, url }) => {
         onCancel={() => setCreateModal(false)}
       >
         <Form form={form} onFinish={onFinish} layout="vertical" initialValues={{ title, description }}>
-          <Form.Item label="Title" name="title" rules={[{ required: true }]}>
-            <Input />
-          </Form.Item>
-          <Form.Item label="Description" name="description" rules={[{ required: true }]}>
-            <Input.TextArea />
-          </Form.Item>
+          {page === "merchant" && <>
+            <Form.Item label="Title" name="title" rules={[{ required: true }]}>
+              <Input />
+            </Form.Item>
+            <Form.Item label="Description" name="description" rules={[{ required: true }]}>
+              <Input.TextArea />
+            </Form.Item>
+          </>}
           <Form.Item >
             <Upload onChange={handleChange} customRequest={dummyRequest} maxCount={1}>
               <AntButton icon={<InboxOutlined />}>Upload Image</AntButton>

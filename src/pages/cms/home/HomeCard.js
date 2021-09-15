@@ -93,7 +93,7 @@ const HomeCard = ({ img, description, title, type, url, featureImg }) => {
       </Card>
       {/*update merchant hero start */}
       <Modal
-        title="Update Business "
+        title="Update Home Content "
         centered
         visible={createModal}
         footer={null}

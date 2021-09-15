@@ -4,7 +4,7 @@ import SimpleBar from 'simplebar-react';
 import { useLocation } from "react-router-dom";
 import { CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCogs, faAddressCard, faGlobe, faBusinessTime, faAddressBook, faHome, faCartArrowDown, faTimes, faUserShield, faArrowRight, faCog, faUserFriends } from "@fortawesome/free-solid-svg-icons";
+import { faCogs, faAddressCard, faGlobe, faBusinessTime, faAddressBook, faHome, faCartArrowDown, faTimes, faUserShield, faArrowRight, faCog, faUserFriends, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Nav, Badge, Image, Button, Navbar } from '@themesberg/react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -109,6 +109,7 @@ export default (props = {}) => {
               <NavItem title="HowItWork" icon={faCogs} link={Routes.HowItWork} />
               <NavItem title="Product" icon={faCartArrowDown} link={Routes.Product} />
               <NavItem title="Subscribers" icon={faUserFriends} link={Routes.Subscribers} />
+              <NavItem title="Messages" icon={faEnvelope} link={Routes.Messages} />
               <NavItem title="Settings" icon={faCog} link={Routes.Settings} />
               <Button variant="secondary" className="text-dark me-3" onClick={() => logout()}>
                 Logout <FontAwesomeIcon icon={faArrowRight} className="d-none d-sm-inline ms-1" />

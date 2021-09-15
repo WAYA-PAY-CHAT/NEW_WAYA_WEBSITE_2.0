@@ -12,7 +12,7 @@ import { dummyRequest } from '../../../services/utilities';
 
 const ProductCard = ({ data, categories }) => {
 
-  const [value, setValue] = useState({})
+  // const [value, setValue] = useState({})
   const [file, setFile] = useState("")
   const [loading, setLoading] = useState(false)
   const [showModal, setShowModal] = useRecoilState(createProductModal);
@@ -22,6 +22,7 @@ const ProductCard = ({ data, categories }) => {
   const setRefresh = useSetRecoilState(productRefresh)
   const { Option } = Select
   const [form] = Form.useForm()
+  const [forms] = Form.useForm()
   const { confirm } = Modal;
 
   const columns = [
@@ -55,7 +56,7 @@ const ProductCard = ({ data, categories }) => {
   ];
 
   const handleUpdateModal = (value) => {
-    setValue(value)
+    forms.setFieldsValue({ name: value.product_name, id: value.id, description: value.product_description, image_url: value.product_image_url, category_id: value.product_category_id, url: value.url })
     setEditModal(true)
     setResponse({})
   }
@@ -94,6 +95,7 @@ const ProductCard = ({ data, categories }) => {
     fd.append('name', val.name)
     fd.append('description', val.description)
     fd.append('category_id', val.category_id)
+    fd.append('url', val.url)
     fd.append('product_image', file);
     const res = await createProduct(fd)
     if (res.status) {
@@ -101,6 +103,7 @@ const ProductCard = ({ data, categories }) => {
       setShowAlert(true)
       setRefresh(date.toTimeString())
       setShowModal(false)
+      form.setFieldsValue()
     } else {
       setResponse({ message: res.message || res, title: "failed" })
       setShowAlert(true)
@@ -115,6 +118,7 @@ const ProductCard = ({ data, categories }) => {
     fd.append('name', val.name)
     fd.append('description', val.description)
     fd.append('category_id', val.category_id)
+    fd.append('url', val.url)
     fd.append('product_image', file);
     fd.append('image_url', val.image_url);
     fd.append('id', val.id);
@@ -149,6 +153,7 @@ const ProductCard = ({ data, categories }) => {
     <>
       <Card border="light" className="text-center p-0 mb-4">
         <Card.Body>
+          <h5 className="mb-4 text-primary">All Product</h5>
           <Table columns={columns} pagination={false} dataSource={data} rowKey="id" />
         </Card.Body>
       </Card>
@@ -163,6 +168,9 @@ const ProductCard = ({ data, categories }) => {
       >
         <Form form={form} onFinish={onFinish} layout="vertical">
           <Form.Item label="Name" name="name" rules={[{ required: true }]}>
+            <Input />
+          </Form.Item>
+          <Form.Item label="Product Url" name="url" rules={[{ required: true }]}>
             <Input />
           </Form.Item>
           <Form.Item label="Description" name="description" rules={[{ required: true }]}>
@@ -198,8 +206,11 @@ const ProductCard = ({ data, categories }) => {
         footer={null}
         onCancel={() => setEditModal(false)}
       >
-        <Form form={form} onFinish={onFinishUpdate} layout="vertical" initialValues={{ name: value.product_name, id: value.id, description: value.product_description, image_url: value.product_image_url, category_id: value.product_category_id }}>
+        <Form form={forms} onFinish={onFinishUpdate} layout="vertical">
           <Form.Item label="Name" name="name" rules={[{ required: true }]}>
+            <Input />
+          </Form.Item>
+          <Form.Item label="Product Url" name="url" rules={[{ required: true }]}>
             <Input />
           </Form.Item>
           <Form.Item label="Description" name="description" rules={[{ required: true }]}>

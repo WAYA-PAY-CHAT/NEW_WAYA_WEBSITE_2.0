@@ -1,7 +1,7 @@
 import React from 'react'
 import { Breadcrumb, Card } from '@themesberg/react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserFriends } from '@fortawesome/free-solid-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { useRecoilValueLoadable } from 'recoil';
 import { subScriber } from '../../../states/settings';
 import { Table } from 'antd';
@@ -32,7 +32,7 @@ const Subscribers = () => {
       <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
         <div className="d-block mb-4 mb-md-0">
           <Breadcrumb className="d-none d-md-inline-block" listProps={{ className: "breadcrumb-dark breadcrumb-transparent" }}>
-            <Breadcrumb.Item><FontAwesomeIcon icon={faUserFriends} /></Breadcrumb.Item>
+            <Breadcrumb.Item><FontAwesomeIcon icon={faHome} /></Breadcrumb.Item>
             <Breadcrumb.Item>Waya pay</Breadcrumb.Item>
             <Breadcrumb.Item active>Subscribers</Breadcrumb.Item>
           </Breadcrumb>

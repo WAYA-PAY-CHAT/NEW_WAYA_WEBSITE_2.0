@@ -26,8 +26,8 @@ const Agents = () => {
           <h4>Agent Page</h4>
         </div>
       </div>
-      <BusinessCard img={merchantList.hero_image_url} description={merchantList.hero_description} title={merchantList.hero_title} type="hero" url="/admin/business/agent/hero" />
-      <BusinessCard img={merchantList.why_become_agent_image} description={merchantList.body1_description} title={merchantList.body1_title} type="body" url="/admin/business/agent/body" />
+      <BusinessCard page="merchant" img={merchantList.hero_image_url} description={merchantList.hero_description} title={merchantList.hero_title} type="hero" url="/admin/business/agent/hero" />
+      <BusinessCard page="agent" img={merchantList.why_become_agent_image} description={merchantList.body1_description} title={merchantList.body1_title} type="body" url="/admin/business/agent/body" />
     </div>
   )
 }

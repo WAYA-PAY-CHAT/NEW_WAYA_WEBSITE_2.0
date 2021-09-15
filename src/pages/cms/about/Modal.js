@@ -56,7 +56,7 @@ const AboutModal = () => {
   return (
     <Modal as={Modal.Dialog} centered show={showModal} onHide={() => setShowModal(false)}>
       <Modal.Header>
-        <Modal.Title className="h6">Create New Admin</Modal.Title>
+        <Modal.Title className="h6">Create New Feature</Modal.Title>
         <Button variant="close" aria-label="Close" onClick={() => setShowModal(false)} />
       </Modal.Header>
       <Modal.Body>
@@ -69,7 +69,7 @@ const AboutModal = () => {
           </Form.Item>
           <Form.Item >
             <Upload onChange={handleChange} customRequest={dummyRequest} maxCount={1}>
-              <Button icon={<InboxOutlined />}>Upload Blog Image</Button>
+              <Button icon={<InboxOutlined />}>Upload Image</Button>
             </Upload>
           </Form.Item>
           <Form.Item>

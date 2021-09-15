@@ -175,7 +175,7 @@ const Home = () => {
           <h4>Home Page</h4>
         </div>
       </div>
-      <HomeCard img={home.hero_image_url} description={home.hero_description} title={home.hero_title} type="hero" url="/admin/home_page/hero" />
+      <HomeCard featureImg={true} img={home.hero_image_url} description={home.hero_description} title={home.hero_title} type="hero" url="/admin/home_page/hero" />
       <Row>
         <Col xs={12} xl={4} lg={4}>
           <HomeCard featureImg={true} img={home.feature1_image_url} description={home.feature1_description} title={home.feature1_title} type="feature" url="/admin/home_page/feature/1" />

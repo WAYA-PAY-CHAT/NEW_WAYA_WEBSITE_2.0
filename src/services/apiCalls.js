@@ -300,6 +300,22 @@ export async function getSubScribers() {
     .catch(err => console.log(err))
 }
 
+export async function getMessages() {
+  const url = `/admin/messages`
+  return apiClient
+    .get(url)
+    .then(response => {
+      if (response) {
+        const { data, status } = response
+        if (status) {
+          return data
+        }
+      }
+      return false
+    })
+    .catch(err => console.log(err))
+}
+
 // social links
 export async function getSocialLinks() {
   const url = `/admin/social`

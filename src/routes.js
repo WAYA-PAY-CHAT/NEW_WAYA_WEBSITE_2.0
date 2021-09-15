@@ -19,6 +19,7 @@ export const Routes = {
     HowItWork: "/howItWork",
     Product: "/product",
     Subscribers: "/subscribers",
+    Messages: "/messages",
     Features: "/features",
     // Presentation: "/dashboard/presentation",
     // Upgrade: "/upgrade",

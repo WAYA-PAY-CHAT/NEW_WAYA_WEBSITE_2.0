@@ -26,10 +26,10 @@ const Merchant = () => {
           <h4>Merchants Page</h4>
         </div>
       </div>
-      <BusinessCard img={merchantList.hero_image_url} description={merchantList.hero_description} title={merchantList.hero_title} type="hero" url="/admin/business/merchant/hero" />
-      <BusinessCard img={merchantList.body1_image_url} description={merchantList.body1_description} title={merchantList.body1_title} type="body" url="/admin/business/merchant/body/1" />
-      <BusinessCard img={merchantList.body2_image_url} description={merchantList.body2_description} title={merchantList.body2_title} type="body" url="/admin/business/merchant/body/2" />
-      <BusinessCard img={merchantList.body3_image_url} description={merchantList.body3_description} title={merchantList.body3_title} type="body" url="/admin/business/merchant/body/3" />
+      <BusinessCard page="merchant" img={merchantList.hero_image_url} description={merchantList.hero_description} title={merchantList.hero_title} type="hero" url="/admin/business/merchant/hero" />
+      <BusinessCard page="merchant" img={merchantList.body1_image_url} description={merchantList.body1_description} title={merchantList.body1_title} type="body" url="/admin/business/merchant/body/1" />
+      <BusinessCard page="merchant" img={merchantList.body2_image_url} description={merchantList.body2_description} title={merchantList.body2_title} type="body" url="/admin/business/merchant/body/2" />
+      <BusinessCard page="merchant" img={merchantList.body3_image_url} description={merchantList.body3_description} title={merchantList.body3_title} type="body" url="/admin/business/merchant/body/3" />
     </div>
   )
 }

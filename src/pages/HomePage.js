@@ -3,7 +3,6 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import { Routes } from "../routes";
 
 // pages
-import DashboardOverview from "./dashboard/DashboardOverview";
 import Transactions from "./Transactions";
 import Signin from "./examples/Signin";
 import ForgotPassword from "./examples/ForgotPassword";
@@ -11,6 +10,7 @@ import ResetPassword from "./examples/ResetPassword";
 import Lock from "./examples/Lock";
 import NotFoundPage from "./examples/NotFound";
 
+// import DashboardOverview from "./dashboard/DashboardOverview";
 // import Settings from "./Settings";
 // import Upgrade from "./Upgrade";
 // import ServerError from "./examples/ServerError";
@@ -61,6 +61,7 @@ import Settings from './cms/settings/Settings';
 import Subscribers from './cms/subscribers/Subscribers';
 import Features from './cms/features/Features';
 import Agents from './cms/business/Agents';
+import Messages from './cms/subscribers/Messages';
 
 const RouteWithLoader = ({ component: Component, ...rest }) => {
   const [loaded, setLoaded] = useState(false);
@@ -124,10 +125,11 @@ export default () => (
     <RouteWithLoader exact path={Routes.NotFound} component={NotFoundPage} />
 
     {/* pages */}
-    <RouteWithSidebar exact path={Routes.DashboardOverview} component={DashboardOverview} />
+    {/* <RouteWithSidebar exact path={Routes.DashboardOverview} component={DashboardOverview} /> */}
     <RouteWithSidebar exact path={Routes.Transactions} component={Transactions} />
     <RouteWithSidebar exact path={Routes.Settings} component={Settings} />
     <RouteWithSidebar exact path={Routes.Subscribers} component={Subscribers} />
+    <RouteWithSidebar exact path={Routes.Messages} component={Messages} />
     <RouteWithSidebar exact path={Routes.Admin} component={Admin} />
     <RouteWithSidebar exact path={Routes.About} component={About} />
     <RouteWithSidebar exact path={Routes.Blogs} component={Blogs} />

@@ -12,7 +12,7 @@ import { dummyRequest } from '../../../services/utilities';
 
 const CategoryCard = ({ data }) => {
 
-  const [value, setValue] = useState({})
+  // const [value, setValue] = useState({})
   const [file, setFile] = useState("")
   const [loading, setLoading] = useState(false)
   const [showModal, setShowModal] = useRecoilState(createCategoryModal);
@@ -65,7 +65,7 @@ const CategoryCard = ({ data }) => {
   ];
 
   const handleUpdateModal = (value) => {
-    setValue(value)
+    forms.setFieldsValue({ page_title: value.category_page_title, description_main: value.category_description, name: value.category_name, description_sub: value.category_description2, id: value.id, image_url: value.category_image_url, url: value.url })
     setEditModal(true)
     setResponse({})
   }
@@ -105,6 +105,7 @@ const CategoryCard = ({ data }) => {
     fd.append('page_title', val.page_title)
     fd.append('description_main', val.description_main)
     fd.append('description_sub', val.description_sub)
+    fd.append('url', val.url)
     fd.append('category_image', file);
     const res = await createCategories(fd)
     if (res.status) {
@@ -112,7 +113,7 @@ const CategoryCard = ({ data }) => {
       setShowAlert(true)
       setRefresh(date.toTimeString())
       setShowModal(false)
-      form.setFieldsValue({})
+      form.setFieldsValue()
     } else {
       setResponse({ message: res.message || res, title: "failed" })
       setShowAlert(true)
@@ -128,6 +129,7 @@ const CategoryCard = ({ data }) => {
     fd.append('page_title', val.page_title)
     fd.append('description_main', val.description_main)
     fd.append('description_sub', val.description_sub)
+    fd.append('url', val.url)
     fd.append('category_image', file);
     fd.append('image_url', val.image_url);
     fd.append('id', val.id);
@@ -163,6 +165,7 @@ const CategoryCard = ({ data }) => {
     <>
       <Card border="light" className="text-center p-0 mb-4">
         <Card.Body>
+          <h5 className="mb-4 text-primary">All Category</h5>
           <Table columns={columns} pagination={false} dataSource={data} rowKey="id" />
         </Card.Body>
       </Card>
@@ -177,6 +180,9 @@ const CategoryCard = ({ data }) => {
       >
         <Form form={form} onFinish={onFinish} layout="vertical">
           <Form.Item label="Name" name="name" rules={[{ required: true }]}>
+            <Input />
+          </Form.Item>
+          <Form.Item label="Category Url" name="url" rules={[{ required: true }]}>
             <Input />
           </Form.Item>
           <Form.Item label="Title" name="page_title" rules={[{ required: true }]}>
@@ -210,8 +216,11 @@ const CategoryCard = ({ data }) => {
         footer={null}
         onCancel={() => setEditModal(false)}
       >
-        <Form form={forms} onFinish={onFinishUpdate} layout="vertical" initialValues={{ page_title: value.category_page_title, description_main: value.category_description, name: value.category_name, description_sub: value.category_description2, id: value.id, image_url: value.category_image_url }}>
+        <Form form={forms} onFinish={onFinishUpdate} layout="vertical">
           <Form.Item label="Name" name="name" rules={[{ required: true }]}>
+            <Input />
+          </Form.Item>
+          <Form.Item label="Category Url" name="url" rules={[{ required: true }]}>
             <Input />
           </Form.Item>
           <Form.Item label="Title" name="page_title" rules={[{ required: true }]}>

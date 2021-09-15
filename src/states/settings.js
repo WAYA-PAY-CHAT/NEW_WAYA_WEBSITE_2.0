@@ -1,5 +1,5 @@
 import { selector, atom } from "recoil";
-import { getSettings, getSocialLinks, getSubScribers } from "../services/apiCalls";
+import { getMessages, getSettings, getSocialLinks, getSubScribers } from "../services/apiCalls";
 
 export const settingsRefresh = atom({
   key: "settingsRefresh",
@@ -41,6 +41,19 @@ export const subScriber = selector({
   get: async ({ get }) => {
     try {
       const result = await getSubScribers();
+      return result.data || {};
+    } catch (error) {
+      console.error(`ERROR: \n${error}`);
+      return {};
+    }
+  }
+});
+
+export const messages = selector({
+  key: "messages",
+  get: async ({ get }) => {
+    try {
+      const result = await getMessages();
       return result.data || {};
     } catch (error) {
       console.error(`ERROR: \n${error}`);
