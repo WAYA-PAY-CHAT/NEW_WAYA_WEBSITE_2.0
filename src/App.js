@@ -23,53 +23,56 @@ import PrivacyPage from './pages/privacy';
 function App() {
   return (
     <div className="App">
-               <Router>
+      <Router>
         <Switch>
-          <Route exact  path="/about">
+          <Route exact path="/about">
             <About />
           </Route>
-          <Route exact  path="/blog">
+          <Route exact path="/blogs">
             <Blog />
           </Route>
-          <Route exact  path='/agent'>
-        <Agent/>
-      </Route>
-      <Route exact  path="/contact">
-        <ContactPage />
-      </Route>
-      <Route exact  path='/merchant'>
-      <MerchantPage/>
-      </Route>
-      <Route exact path='/wayapay'>
-      <WayaPay/>
-      </Route>
-      <Route exact  path='/wayagram'>
-      <WayaGram/>
-      </Route>
-      <Route exact  path='/wayachat'>
-      <WayaChat/>
-      </Route> 
-      <Route exact  path='/signin'>
-      <SignIn/>
-      </Route>
-      <Route exact  path='/how-it-works'>
-      <HowItWorks/>
-      </Route>
-      <Route exact path='/terms-of-use'>
-        <TermsOfUse/>
-      </Route>
-      <Route exact path='/privacy-page'>
-        <PrivacyPage/>
-      </Route>
-      <Route path={`/blog/:topicId`}>
-          <SinglePost />
-        </Route>
+          <Route exact path='/agent'>
+            <Agent />
+          </Route>
+          <Route exact path="/contact">
+            <ContactPage />
+          </Route>
+          <Route exact path='/merchant'>
+            <MerchantPage />
+          </Route>
+          <Route exact path='/product/:cat'>
+            <WayaChat />
+          </Route>
+          <Route exact path='/wayapay'>
+            <WayaPay />
+          </Route>
+          <Route exact path='/wayagram'>
+            <WayaGram />
+          </Route>
+          <Route exact path='/wayachat'>
+            <WayaChat />
+          </Route>
+          <Route exact path='/signin'>
+            <SignIn />
+          </Route>
+          <Route exact path='/how-it-works'>
+            <HowItWorks />
+          </Route>
+          <Route exact path='/terms-of-use'>
+            <TermsOfUse />
+          </Route>
+          <Route exact path='/privacy-page'>
+            <PrivacyPage />
+          </Route>
+          <Route path={`/blogs/:topicId`}>
+            <SinglePost />
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
         </Switch>
       </Router>
-   </div>
+    </div>
   );
 }
 

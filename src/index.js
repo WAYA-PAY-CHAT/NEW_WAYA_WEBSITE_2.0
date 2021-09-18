@@ -7,11 +7,12 @@ import ReactDOM from 'react-dom';
 import './styles/index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RecoilRoot } from 'recoil';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <RecoilRoot>
     <App />
-  </React.StrictMode>,
+  </RecoilRoot>,
   document.getElementById('root')
 );
 
