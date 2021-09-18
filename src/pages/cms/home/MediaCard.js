@@ -10,9 +10,10 @@ import { imageUrl } from '../../../services/axios'
 import { faVideo } from '@fortawesome/free-solid-svg-icons';
 import { featureAlert, featureResponse, homeRefresh } from '../../../states/home';
 
-const MediaCard = ({ img, video_url, url }) => {
+const MediaCard = ({ img, img1, video_url, url }) => {
   const [loading, setLoading] = useState(false)
   const [file, setFile] = useState("")
+  const [file1, setFile1] = useState("")
   const [createModal, setCreateModal] = useState(false)
   const setShowAlert = useSetRecoilState(featureAlert);
   const setResponse = useSetRecoilState(featureResponse)
@@ -25,6 +26,7 @@ const MediaCard = ({ img, video_url, url }) => {
     const fd = new FormData();
     fd.append('video_url', val.video_url)
     fd.append('download_app_image', file);
+    fd.append('feature_image', file1);
     try {
       const res = await updateHomePage({ data: fd, url })
       if (res.status) {
@@ -58,6 +60,15 @@ const MediaCard = ({ img, video_url, url }) => {
     }
   };
 
+  const handleChange1 = info => {
+    if (info.file.status === 'done') {
+      // Get this url from response in real world.
+      getBase64(info.file.originFileObj, imageUrl => {
+        setFile1(info.file.originFileObj)
+      });
+    }
+  };
+
 
   return (
     <>
@@ -67,10 +78,13 @@ const MediaCard = ({ img, video_url, url }) => {
             Update Media <FontAwesomeIcon icon={faVideo} className="d-none d-sm-inline ms-1" />
           </Button>
           <Row>
-            <Col xs={12} xl={6} lg={6}>
-              <img src={`${imageUrl}${img}`} alt="business" className="mb-4" />
+            <Col xs={12} xl={4} lg={4}>
+              <img style={{ height: 250 }} src={`${imageUrl}${img}`} alt="business" className="mb-4" />
             </Col>
-            <Col xs={12} xl={6} lg={6}>
+            <Col xs={12} xl={4} lg={4}>
+              <img style={{ height: 250 }} src={`${imageUrl}${img1}`} alt="business" className="mb-4" />
+            </Col>
+            <Col xs={12} xl={4} lg={4}>
               <iframe title="how it work" height="315"
                 src={video_url} >
               </iframe>
@@ -93,6 +107,11 @@ const MediaCard = ({ img, video_url, url }) => {
           <Form.Item >
             <Upload onChange={handleChange} customRequest={dummyRequest} maxCount={1}>
               <AntButton icon={<InboxOutlined />}>Upload Image</AntButton>
+            </Upload>
+          </Form.Item>
+          <Form.Item >
+            <Upload onChange={handleChange1} customRequest={dummyRequest} maxCount={1}>
+              <AntButton icon={<InboxOutlined />}>Upload Feature Image</AntButton>
             </Upload>
           </Form.Item>
           <Form.Item>

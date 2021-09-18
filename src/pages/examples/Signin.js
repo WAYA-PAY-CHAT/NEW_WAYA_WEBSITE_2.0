@@ -18,7 +18,7 @@ export default () => {
   useEffect(() => {
     const token = localStorage.getItem("user_data")
     if (token) {
-      history.push(Routes.DashboardOverview)
+      history.push(Routes.Admin)
     }
   }, [])
   const [data, setData] = useState({ email: "", password: "" })

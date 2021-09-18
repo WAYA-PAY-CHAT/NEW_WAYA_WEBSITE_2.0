@@ -45,3 +45,18 @@ export const agents = selector({
     }
   }
 });
+
+export const howToJoin = selector({
+  key: "howToJoin",
+  get: async ({ get }) => {
+    try {
+      const res = get(businessRefresh);
+      console.log(res)
+      const result = await getBusiness("agent/how_to_join");
+      return result.data || {};
+    } catch (error) {
+      console.error(`ERROR: \n${error}`);
+      return {};
+    }
+  }
+});

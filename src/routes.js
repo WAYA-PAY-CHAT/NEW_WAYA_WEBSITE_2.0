@@ -1,7 +1,7 @@
 
 export const Routes = {
     // pages
-    Signin: "/",
+    Signin: "/sign-in",
     ForgotPassword: "/forgot-password",
     ResetPassword: "/reset-password",
     Lock: "/lock",

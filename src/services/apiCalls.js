@@ -431,6 +431,37 @@ export async function updateBusiness(payload) {
     .catch(err => console.log(err))
 }
 
+export async function createBusiness(payload) {
+  const url = payload.url
+  return apiClient
+    .post(url, payload.data)
+    .then(response => {
+      if (response) {
+        const { data, status } = response
+        if (status) {
+          return data
+        }
+      }
+      return false
+    })
+    .catch(err => console.log(err))
+}
+
+export async function deleteBusiness(url) {
+  return apiClient
+    .delete(url)
+    .then(response => {
+      if (response) {
+        const { data, status } = response
+        if (status) {
+          return data
+        }
+      }
+      return false
+    })
+    .catch(err => console.log(err))
+}
+
 // products
 export async function getProducts() {
   return apiClient

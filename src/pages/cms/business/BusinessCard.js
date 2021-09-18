@@ -10,9 +10,10 @@ import { updateBusiness } from '../../../services/apiCalls';
 import { imageUrl } from '../../../services/axios'
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
-const BusinessCard = ({ img, description, title, type, url, page }) => {
+const BusinessCard = ({ img, description, title, type, url, page, img1 }) => {
   const [loading, setLoading] = useState(false)
   const [file, setFile] = useState("")
+  const [file1, setFile1] = useState("")
   const [createModal, setCreateModal] = useState(false)
   const setShowAlert = useSetRecoilState(businessAlert);
   const setResponse = useSetRecoilState(businessResponse)
@@ -27,6 +28,7 @@ const BusinessCard = ({ img, description, title, type, url, page }) => {
     fdBody.append('title', val.title)
     fdBody.append('description', val.description)
     fdBody.append('body_image', file);
+    fdBody.append('sign_up_image', file1);
     fdHero.append('hero_title', val.title)
     fdHero.append('hero_description', val.description)
     fdHero.append('hero_image', file);
@@ -64,6 +66,15 @@ const BusinessCard = ({ img, description, title, type, url, page }) => {
     }
   };
 
+  const handleChange1 = info => {
+    if (info.file.status === 'done') {
+      // Get this url from response in real world.
+      getBase64(info.file.originFileObj, imageUrl => {
+        setFile1(info.file.originFileObj)
+      });
+    }
+  };
+
 
   return (
     <>
@@ -72,13 +83,15 @@ const BusinessCard = ({ img, description, title, type, url, page }) => {
           <Row>
             <Col xs={12} xl={6} lg={6}>
               <img src={`${imageUrl}${img}`} alt="business" />
-            </Col>
-            <Col xs={12} xl={6} lg={6}>
-              <h5>{title}</h5>
-              <p>{description}</p>
               <Button variant="success" size="sm" className="text-white me-3" onClick={() => setCreateModal(true)}>
                 Update <FontAwesomeIcon icon={faBriefcase} className="d-none d-sm-inline ms-1" />
               </Button>
+            </Col>
+            <Col xs={12} xl={6} lg={6}>
+              {page === "merchant" ?
+                <><h5>{title}</h5>
+                  <p>{description}</p></> :
+                <img src={`${imageUrl}${img1}`} alt="business" />}
             </Col>
           </Row>
         </Card.Body>
@@ -105,6 +118,12 @@ const BusinessCard = ({ img, description, title, type, url, page }) => {
               <AntButton icon={<InboxOutlined />}>Upload Image</AntButton>
             </Upload>
           </Form.Item>
+          {page === "agent" &&
+            <Form.Item >
+              <Upload onChange={handleChange1} customRequest={dummyRequest} maxCount={1}>
+                <AntButton icon={<InboxOutlined />}>Upload Signup image</AntButton>
+              </Upload>
+            </Form.Item>}
           <Form.Item>
             <AntButton type="primary" htmlType="submit" loading={loading}>
               Update

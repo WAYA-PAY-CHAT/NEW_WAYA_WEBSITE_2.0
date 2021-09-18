@@ -173,6 +173,7 @@ export default () => (
     {/* <RouteWithSidebar exact path={Routes.Upgrade} component={Upgrade} />
     <RouteWithSidebar exact path={Routes.BootstrapTables} component={BootstrapTables} /> */}
 
+    <Redirect from="/" to={Routes.Signin} />
     <Redirect to={Routes.NotFound} />
   </Switch>
 );

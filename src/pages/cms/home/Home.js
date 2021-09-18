@@ -209,7 +209,7 @@ const Home = () => {
           <Table columns={columns} loading={loading} pagination={false} dataSource={featureList} rowKey="id" />
         </Card.Body>
       </Card>
-      <MediaCard img={home.download_app_image_url} video_url={home.feature_video_url} url="/admin/home_page/others" />
+      <MediaCard img1={home.feature_image_url} img={home.download_app_image_url} video_url={home.feature_video_url} url="/admin/home_page/others" />
 
       {/*create feature start */}
       <Modal
