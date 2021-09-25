@@ -28,10 +28,10 @@ export const features = selector({
       const res = get(featureRefresh);
       console.log(res)
       const result = await getFeature();
-      return result.data || {};
+      return result.data || [];
     } catch (error) {
       console.error(`ERROR: \n${error}`);
-      return {};
+      return [];
     }
   }
 });

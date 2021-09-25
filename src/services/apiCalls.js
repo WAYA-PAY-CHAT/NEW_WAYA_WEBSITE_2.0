@@ -284,6 +284,21 @@ export async function updateContact(payload) {
     .catch(err => console.log(err))
 }
 
+export async function deleteContact(id) {
+  return apiClient
+    .delete(`/admin/contacts/${id}`)
+    .then(response => {
+      if (response) {
+        const { data, status } = response
+        if (status) {
+          return data
+        }
+      }
+      return false
+    })
+    .catch(err => console.log(err))
+}
+
 export async function getSubScribers() {
   const url = `/admin/subscribers`
   return apiClient

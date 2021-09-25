@@ -53,10 +53,10 @@ export const howToJoin = selector({
       const res = get(businessRefresh);
       console.log(res)
       const result = await getBusiness("agent/how_to_join");
-      return result.data || {};
+      return result.data || [];
     } catch (error) {
       console.error(`ERROR: \n${error}`);
-      return {};
+      return [];
     }
   }
 });

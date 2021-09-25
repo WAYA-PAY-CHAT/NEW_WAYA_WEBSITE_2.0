@@ -5,7 +5,7 @@ import { faAddressBook, faExclamation, faHome } from '@fortawesome/free-solid-sv
 import { Form, Input, Modal, Button as AntButton, Select, Table, Space, Tag } from 'antd';
 import { contact, contactAlert, contactRefresh, contactResponse } from '../../../states/contact';
 import { useRecoilState, useRecoilValueLoadable, useSetRecoilState } from 'recoil';
-import { createContact, updateContact } from '../../../services/apiCalls';
+import { createContact, deleteContact, updateContact } from '../../../services/apiCalls';
 import AlertToast from '../../../components/AlertToast';
 
 const Contact = () => {
@@ -53,7 +53,8 @@ const Contact = () => {
         return (
           <Space size="middle">
             <AntButton type="ghost" onClick={() => handleUpdateModal(record)}>Edit </AntButton>
-            <AntButton type="danger" onClick={() => confirmAction(id, action)}>{action}</AntButton>
+            <AntButton type="primary" onClick={() => confirmAction(id, action)}>{action}</AntButton>
+            <AntButton type="danger" onClick={() => confirmAction(id, "delete")}>Delete</AntButton>
           </Space>
         )
       },
@@ -66,7 +67,7 @@ const Contact = () => {
       icon: <FontAwesomeIcon icon={faExclamation} color="primary" />,
       content: 'Click Ok to continue',
       onOk() {
-        handleShowHide(id, action.toLowerCase())
+        action === "delete" ? handleDelete(id) : handleShowHide(id, action.toLowerCase())
       },
       onCancel() {
         console.log('Cancel');
@@ -75,48 +76,41 @@ const Contact = () => {
   }
 
   const handleShowHide = async (id, type) => {
-    const date = new Date()
     const res = await updateContact({ data: {}, type, id })
-    if (res.status) {
-      setResponse({ message: res.message, title: "success" })
-      setShowAlert(true)
-      setRefresh(date.toTimeString())
-    } else {
-      setResponse({ message: res.message || res, title: "failed" })
-      setShowAlert(true)
-    }
+    handleResponse(res)
+  }
+
+  const handleDelete = async (id) => {
+    const res = await deleteContact(id)
+    handleResponse(res)
   }
 
   const onFinish = async (val) => {
-    const date = new Date()
     setLoading(true)
     const res = await createContact(val)
-    if (res.status) {
-      setResponse({ message: res.message, title: "success" })
-      setShowAlert(true)
-      setRefresh(date.toTimeString())
-      setViewModal(false)
-    } else {
-      setResponse({ message: res.message || res, title: "failed" })
-      setShowAlert(true)
-    }
+    handleResponse(res)
     setLoading(false)
   }
 
   const onFinishUpdate = async (val) => {
-    const date = new Date()
     setLoading(true)
     const res = await updateContact({ data: val, type: "update", id: val.id })
+    handleResponse(res)
+    setLoading(false)
+  }
+
+  const handleResponse = (res) => {
+    const date = new Date()
     if (res.status) {
       setResponse({ message: res.message, title: "success" })
       setShowAlert(true)
       setRefresh(date.toTimeString())
       setEditModal(false)
+      setViewModal(false)
     } else {
       setResponse({ message: res.message || res, title: "failed" })
       setShowAlert(true)
     }
-    setLoading(false)
   }
 
   const handleUpdateModal = (val) => {

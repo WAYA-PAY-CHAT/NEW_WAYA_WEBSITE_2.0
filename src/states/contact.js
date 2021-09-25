@@ -23,10 +23,10 @@ export const contact = selector({
       const res = get(contactRefresh);
       console.log(res)
       const result = await contacts();
-      return result.data || {};
+      return result.data || [];
     } catch (error) {
       console.error(`ERROR: \n${error}`);
-      return {};
+      return [];
     }
   }
 });

@@ -41,10 +41,10 @@ export const subScriber = selector({
   get: async ({ get }) => {
     try {
       const result = await getSubScribers();
-      return result.data || {};
+      return result.data || [];
     } catch (error) {
       console.error(`ERROR: \n${error}`);
-      return {};
+      return [];
     }
   }
 });

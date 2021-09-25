@@ -28,10 +28,10 @@ export const abouts = selector({
       const res = get(aboutRefresh);
       console.log(res)
       const result = await getAbouts();
-      return result.data || {};
+      return result.data || [];
     } catch (error) {
       console.error(`ERROR: \n${error}`);
-      return {};
+      return [];
     }
   }
 });

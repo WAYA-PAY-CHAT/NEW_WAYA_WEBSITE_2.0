@@ -33,10 +33,10 @@ export const howItWork = selector({
       const res = get(howItWorkRefresh);
       console.log(res)
       const result = await howItWorks();
-      return result.data || {};
+      return result.data || [];
     } catch (error) {
       console.error(`ERROR: \n${error}`);
-      return {};
+      return [];
     }
   }
 });
